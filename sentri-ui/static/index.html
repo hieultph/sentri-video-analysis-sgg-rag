@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Sentri</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <!-- Global Settings Modal -->
+    <div id="globalSettingsModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>⚙️ Global Settings</h3>
+          <button class="close-btn" onclick="closeGlobalSettingsModal()">
+            &times;
+          </button>
+        </div>
+        <form id="globalSettingsForm">
+          <div class="form-group">
+            <label for="defaultCaptureInterval"
+              >Default Capture Interval (seconds) *</label
+            >
+            <input
+              type="number"
+              id="defaultCaptureInterval"
+              min="0.5"
+              max="60"
+              step="0.5"
+              value="2"
+              required
+            />
+            <small>Default interval for new cameras</small>
+          </div>
+
+          <div class="form-group">
+            <label>
+              <input type="checkbox" id="autoDetection" checked />
+              Enable Auto Detection
+            </label>
+            <small>Automatically detect events from scene graphs</small>
+          </div>
+
+          <div class="form-group">
+            <label>
+              <input type="checkbox" id="saveFrames" checked />
+              Save Captured Frames
+            </label>
+            <small>Save frames to disk for review</small>
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              onclick="closeGlobalSettingsModal()"
+            >
+              Cancel
+            </button>
+            <button type="submit" class="btn btn-primary">Save Settings</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Event Details Modal -->
+    <div id="eventDetailsModal" class="modal">
+      <div class="modal-content event-details-modal">
+        <div class="modal-header">
+          <h3>📸 Event Details</h3>
+          <button class="close-btn" onclick="closeEventDetailsModal()">
+            &times;
+          </button>
+        </div>
+        <div id="eventDetailsContent" class="event-details-content">
+          <div class="loading">Loading event details...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scene Graph Detail Modal -->
+    <div id="sceneGraphModal" class="modal">
+      <div class="modal-content scene-graph-modal">
+        <div class="modal-header">
+          <h3>🔍 Scene Graph Details</h3>
+          <button class="close-btn" onclick="closeSceneGraphModal()">
+            &times;
+          </button>
+        </div>
+        <div id="sceneGraphContent" class="scene-graph-content">
+          <div class="loading">Loading scene graph data...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chat Modal -->
+    <div id="chatModal" class="modal">
+      <div class="modal-content chat-modal">
+        <div class="modal-header">
+          <h3>💬 Chat with Sentri AI</h3>
+          <button class="close-btn" onclick="closeChatModal()">&times;</button>
+        </div>
+        <div id="chatHistory" class="chat-history"></div>
+        <div class="chat-input-container">
+          <input
+            type="text"
+            id="chatInput"
+            placeholder="Ask Sentri about events..."
+            onkeypress="handleChatKeyPress(event)"
+          />
+          <button onclick="sendChatMessage()" class="btn btn-primary">
+            Send
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Camera Modal -->
+    <div id="addCameraModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>➕ Add New Camera</h3>
+          <button class="close-btn" onclick="closeAddCameraModal()">
+            &times;
+          </button>
+        </div>
+        <form id="addCameraForm">
+          <div class="form-group">
+            <label for="cameraName">Camera Name *</label>
+            <input
+              type="text"
+              id="cameraName"
+              required
+              placeholder="e.g., Front Door"
+            />
+          </div>
+          <div class="form-group">
+            <label for="cameraLocation">Location</label>
+            <input
+              type="text"
+              id="cameraLocation"
+              placeholder="e.g., Main Entrance"
+            />
+          </div>
+          <div class="form-group">
+            <label for="streamUrl">Stream URL *</label>
+            <input
+              type="url"
+              id="streamUrl"
+              required
+              placeholder="http://camera-ip:port/stream"
+            />
+            <small>Enter HTTP stream URL (e.g., MJPEG or HLS stream)</small>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              onclick="closeAddCameraModal()"
+            >
+              Cancel
+            </button>
+            <button type="submit" class="btn btn-primary">Add Camera</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="dashboard">
+      <!-- Header -->
+      <header class="dashboard-header">
+        <div class="header-left">
+          <h1>🛡️ Sentri Dashboard</h1>
+          <span id="userInfo" class="user-info"></span>
+        </div>
+        <div class="header-right">
+          <button onclick="openAddCameraModal()" class="btn btn-primary">
+            ➕ Add Camera
+          </button>
+          <button onclick="openChatModal()" class="btn btn-secondary">
+            💬 Chat
+          </button>
+          <button onclick="logout()" class="btn btn-danger">Logout</button>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <div class="dashboard-content">
+        <!-- Top Controls -->
+        <div class="controls-bar">
+          <div class="control-group">
+            <label for="cameraSelect">Camera:</label>
+            <select id="cameraSelect" onchange="onCameraChange()">
+              <option value="">Select a camera...</option>
+            </select>
+            <button
+              id="deleteCameraBtn"
+              onclick="deleteSelectedCamera()"
+              class="btn btn-danger"
+              style="margin-left: 10px; display: none"
+              title="Delete selected camera"
+            >
+              🗑️ Delete
+            </button>
+            <button
+              id="clearHistoryBtn"
+              onclick="clearCameraHistory()"
+              class="btn btn-warning"
+              style="margin-left: 10px; display: none"
+              title="Clear all history for selected camera"
+            >
+              🧹 Clear History
+            </button>
+          </div>
+
+          <div class="control-group">
+            <label for="eventFilter">Event Type:</label>
+            <select id="eventFilter" onchange="loadEvents()">
+              <option value="">All Events</option>
+              <option value="motorcycle_collides_with_person">
+                Motorcycle Collision
+              </option>
+              <option value="person_falls">Person Falls</option>
+              <option value="intrusion">Intrusion</option>
+              <option value="fire">Fire</option>
+              <option value="loitering">Loitering</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <label for="captureInterval">Capture Rate (seconds):</label>
+            <input
+              type="number"
+              id="captureInterval"
+              min="0.5"
+              max="60"
+              step="0.5"
+              value="2"
+              onchange="updateCaptureRate()"
+              title="Frame capture interval in seconds"
+            />
+            <button
+              onclick="showGlobalSettings()"
+              class="btn btn-settings"
+              title="Global Settings"
+            >
+              ⚙️
+            </button>
+          </div>
+
+          <button onclick="loadEvents()" class="btn btn-secondary">
+            🔄 Refresh
+          </button>
+        </div>
+
+        <!-- Video Stream Section -->
+        <div class="video-section">
+          <div class="video-header">
+            <h3>📹 Live Stream</h3>
+            <span id="videoStatus" class="status-badge"
+              >No camera selected</span
+            >
+          </div>
+          <div class="video-container" id="videoContainer">
+            <div class="video-placeholder">
+              <p>Select a camera to view stream</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event Logs Section -->
+        <div class="events-section">
+          <div class="section-header">
+            <h3>📊 Event Logs</h3>
+            <span id="eventCount" class="count-badge">0 events</span>
+          </div>
+          <div class="table-container">
+            <table class="events-table">
+              <thead>
+                <tr>
+                  <th>Time</th>
+                  <th>Camera</th>
+                  <th>Event</th>
+                  <th>Severity</th>
+                  <th>Confidence</th>
+                  <th>Actions</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody id="eventsTableBody">
+                <tr>
+                  <td colspan="7" class="no-data">No events found</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Notifications Panel -->
+        <div class="notifications-section">
+          <div class="section-header">
+            <h3>🔔 Notifications</h3>
+            <span id="unreadCount" class="count-badge alert">0 unread</span>
+          </div>
+          <div id="notificationsList" class="notifications-list">
+            <p class="no-data">No notifications</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+    <script src="/static/stream-simple.js"></script>
+  </body>
+</html>

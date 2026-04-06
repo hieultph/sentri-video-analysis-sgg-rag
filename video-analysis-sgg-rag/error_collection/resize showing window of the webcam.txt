@@ -1,0 +1,7 @@
+    # Create named windows and set their sizes
+    cv2.namedWindow('Bbox detection', cv2.WINDOW_NORMAL)  # Make window resizable
+    cv2.resizeWindow('Bbox detection', window_width, window_height)  # Set window size using args
+    
+    if visu_type == 'image':
+        cv2.namedWindow('Graph', cv2.WINDOW_NORMAL)
+        cv2.resizeWindow('Graph', min(800, window_width), min(600, window_height))

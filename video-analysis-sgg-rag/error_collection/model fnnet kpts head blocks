@@ -1,0 +1,10 @@
+KeyError: 'Non-existent config key: MODEL.FBNET.KPTS_HEAD_BLOCKS'
+
+
+I notice that KPTS_HEAD_BLOCKS is not defined in the defaults, but it's present in the config file. Let me add the missing KPTS (keypoints) configuration to the defaults:
+
+# > 0 scale, == 0 skip, < 0 same dimension
+_C.MODEL.FBNET.KPTS_HEAD_LAST_SCALE = 0.0
+_C.MODEL.FBNET.KPTS_HEAD_BLOCKS = []
+# overwrite the stride for the head, 0 to use original value
+_C.MODEL.FBNET.KPTS_HEAD_STRIDE = 0

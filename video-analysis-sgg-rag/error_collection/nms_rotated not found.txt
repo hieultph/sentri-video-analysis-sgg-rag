@@ -1,0 +1,35 @@
+# Fallback implementation for nms_rotated if not available in ultralytics
+def nms_rotated(boxes, scores, iou_threshold):
+    """
+    Fallback implementation for rotated NMS.
+    For now, we'll use regular NMS on the bounding rectangles.
+    
+    Args:
+        boxes: tensor of shape (N, 5) where columns are [x_center, y_center, width, height, angle]
+        scores: tensor of shape (N,) with confidence scores
+        iou_threshold: IoU threshold for NMS
+        
+    Returns:
+        indices: tensor of indices of boxes to keep
+    """
+    import torchvision.ops
+    
+    # Convert rotated boxes (x_center, y_center, width, height, angle) to axis-aligned boxes (x1, y1, x2, y2)
+    # This is a simplified approach - we'll use the bounding rectangle of the rotated box
+    x_center, y_center, width, height = boxes[:, 0], boxes[:, 1], boxes[:, 2], boxes[:, 3]
+    
+    # Calculate half extents
+    half_w, half_h = width / 2, height / 2
+    
+    # For simplicity, we'll use the axis-aligned bounding box (ignoring rotation)
+    # In a full implementation, you'd need to calculate the actual rotated box corners
+    x1 = x_center - half_w
+    y1 = y_center - half_h
+    x2 = x_center + half_w
+    y2 = y_center + half_h
+    
+    # Create axis-aligned boxes tensor
+    aa_boxes = torch.stack([x1, y1, x2, y2], dim=1)
+    
+    # Use regular NMS on the axis-aligned boxes
+    return torchvision.ops.nms(aa_boxes, scores, iou_threshold)

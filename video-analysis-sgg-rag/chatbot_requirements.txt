@@ -1,0 +1,5 @@
+# Additional requirements for Scene Graph Video Chatbot
+faiss-cpu==1.7.4
+google-generativeai==0.3.2
+sentence-transformers==2.2.2
+transformers==4.36.0

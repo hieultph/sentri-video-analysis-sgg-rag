@@ -1,0 +1,2 @@
+# install CLIP for the text encoder
+pip install git+https://github.com/ultralytics/CLIP.git 

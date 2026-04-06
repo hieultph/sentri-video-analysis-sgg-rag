@@ -1,0 +1,8 @@
+ValueError: Type mismatch (<class 'list'> vs. <class 'int'>) with values ([192, 384, 576] vs. 192) for config key: MODEL.YOLO.OUT_CHANNELS
+
+config.yaml
+  YOLO:
+    IMG_SIZE: 640
+    OUT_CHANNELS: [192, 384, 576]
+    SIZE: yolov8m
+    WEIGHTS: ''

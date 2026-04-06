@@ -1,0 +1,24 @@
+# Ignore Jupyter Notebook files
+*.ipynb
+*.env
+tmp/
+
+# Ignore cache directories
+__pycache__/
+*/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+/root/mimosatek_project/venv{file_name}
+venv
+agent-api
+
+cloudflared-linux-amd64.debws
+
+tmp/
+
+# Temp files
+static/mobile_streaming_demo_v1.html
+static/recordings/
+tools/tool_management/building_detection/missions/
+tools/tool_management/building_detection/weights/

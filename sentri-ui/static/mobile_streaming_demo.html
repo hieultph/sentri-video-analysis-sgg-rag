@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CTrix Mission Assistant</title>
+    <style>
+      :root {
+        --night: #06152a;
+        --midnight: #0c213f;
+        --sky: #1c7ed6;
+        --aqua: #4dabf7;
+        --mint: #51e2c2;
+        --cloud: rgba(255, 255, 255, 0.06);
+        --card: rgba(12, 33, 63, 0.45);
+        --text-dark: #ecf4ff;
+        --text-light: #91a7c7;
+        --border: rgba(139, 172, 217, 0.28);
+        --shadow: 0 24px 50px rgba(4, 12, 27, 0.45);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", "Inter", sans-serif;
+        color: var(--text-dark);
+        background: radial-gradient(
+            circle at 15% 20%,
+            rgba(90, 170, 255, 0.25),
+            transparent 55%
+          ),
+          radial-gradient(
+            circle at 80% 0%,
+            rgba(108, 255, 222, 0.18),
+            transparent 50%
+          ),
+          linear-gradient(
+            135deg,
+            var(--night) 0%,
+            var(--midnight) 65%,
+            #102b52 100%
+          );
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .hero {
+        text-align: center;
+        padding: 3.5rem 1.5rem 2.5rem 1.5rem;
+        color: #f6fbff;
+      }
+
+      .hero h1 {
+        margin: 0;
+        font-size: 2.8rem;
+        font-weight: 700;
+      }
+
+      .hero p {
+        margin: 0.85rem auto 0 auto;
+        max-width: 620px;
+        font-size: 1.05rem;
+        color: rgba(235, 244, 255, 0.78);
+      }
+
+      .container {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto 4rem auto;
+        padding: 0 1.5rem 3rem 1.5rem;
+      }
+
+      .chat-card {
+        background: var(--card);
+        backdrop-filter: blur(18px);
+        border-radius: 28px;
+        box-shadow: var(--shadow);
+        padding: 2.35rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        border: 1px solid var(--border);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .chat-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(75, 173, 247, 0.18) 0%,
+          rgba(81, 226, 194, 0.16) 100%
+        );
+        opacity: 0.35;
+        pointer-events: none;
+      }
+
+      .chat-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        position: relative;
+        z-index: 1;
+      }
+
+      .chat-header h2 {
+        margin: 0;
+        font-size: 1.45rem;
+      }
+
+      .chat-header p {
+        margin: 0.4rem 0 0 0;
+        color: var(--text-light);
+        font-size: 0.95rem;
+      }
+
+      .status-pill {
+        padding: 0.45rem 1.05rem;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 0.85rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        background: rgba(255, 255, 255, 0.12);
+        color: var(--text-light);
+      }
+
+      .status-pill::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: currentColor;
+        opacity: 0.7;
+      }
+
+      .status-pill.connected {
+        background: rgba(81, 226, 194, 0.2);
+        color: #7ce3c9;
+      }
+
+      .status-pill.connecting {
+        background: rgba(75, 173, 247, 0.18);
+        color: #89c4ff;
+      }
+
+      .status-pill.disconnected {
+        background: rgba(255, 114, 141, 0.22);
+        color: #ff89a6;
+      }
+
+      .chat-container {
+        height: 460px;
+        overflow-y: auto;
+        padding-right: 0.4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        position: relative;
+        z-index: 1;
+      }
+
+      .message {
+        padding: 0.95rem 1.15rem;
+        border-radius: 18px;
+        max-width: 80%;
+        line-height: 1.55;
+        word-break: break-word;
+        animation: fadeIn 0.35s ease;
+      }
+
+      .message.system {
+        align-self: center;
+        background: rgba(75, 173, 247, 0.14);
+        color: #c5defc;
+        font-style: italic;
+        max-width: 70%;
+        text-align: center;
+      }
+
+      .message.user {
+        margin-left: auto;
+        background: linear-gradient(135deg, #51e2c2 0%, #4dabf7 100%);
+        color: #06233f;
+        border-radius: 18px 18px 4px 18px;
+      }
+
+      .message.ai {
+        background: rgba(10, 25, 48, 0.75);
+        border: 1px solid rgba(139, 172, 217, 0.35);
+        border-radius: 18px 18px 18px 4px;
+        color: #dde6f7;
+      }
+
+      .message.thinking {
+        background: rgba(75, 173, 247, 0.12);
+        border: 1px dashed rgba(139, 172, 217, 0.4);
+        color: #c5defc;
+        align-self: center;
+        font-style: italic;
+        max-width: 60%;
+      }
+
+      .message.error {
+        background: rgba(214, 69, 112, 0.18);
+        border: 1px solid rgba(214, 69, 112, 0.48);
+        color: #ffb3c9;
+      }
+
+      .message img {
+        max-width: 100%;
+        border-radius: 12px;
+        margin-top: 0.65rem;
+        box-shadow: 0 18px 35px rgba(4, 12, 27, 0.35);
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(12px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .typing-indicator {
+        display: none;
+        color: #c5defc;
+        font-size: 0.9rem;
+        position: relative;
+        z-index: 1;
+      }
+
+      .quick-commands {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        position: relative;
+        z-index: 1;
+      }
+
+      .quick-commands button {
+        border: 1px solid rgba(139, 172, 217, 0.35);
+        background: rgba(10, 25, 48, 0.55);
+        color: #d9e7ff;
+        padding: 0.45rem 0.95rem;
+        border-radius: 999px;
+        font-size: 0.85rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .quick-commands button:hover {
+        background: rgba(75, 173, 247, 0.2);
+      }
+
+      .composer {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      textarea {
+        width: 100%;
+        border-radius: 18px;
+        border: 1px solid rgba(139, 172, 217, 0.4);
+        padding: 1rem 1.1rem;
+        font-family: inherit;
+        resize: vertical;
+        min-height: 110px;
+        font-size: 0.97rem;
+        transition: border 0.2s ease, box-shadow 0.2s ease;
+        background: rgba(7, 19, 38, 0.65);
+        color: #e6f1ff;
+      }
+
+      textarea:focus {
+        outline: none;
+        border-color: rgba(93, 177, 255, 0.9);
+        box-shadow: 0 0 0 3px rgba(75, 173, 247, 0.25);
+      }
+
+      .composer-actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 1rem;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 1;
+      }
+
+      .composer-hints {
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+        min-width: 0;
+      }
+
+      .composer-actions small {
+        color: var(--text-light);
+      }
+
+      .speech-status {
+        font-size: 0.8rem;
+        min-height: 1em;
+        color: #7ce3c9;
+      }
+
+      .speech-status.info {
+        color: var(--text-light);
+      }
+
+      .speech-status.error {
+        color: #ff89a6;
+      }
+
+      .speech-status.success {
+        color: #7ce3c9;
+      }
+
+      .composer-buttons {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .icon-btn {
+        border: 1px solid rgba(139, 172, 217, 0.45);
+        background: rgba(7, 19, 38, 0.75);
+        color: #d9e7ff;
+        padding: 0.72rem 1.4rem;
+        border-radius: 999px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border 0.2s ease;
+      }
+
+      .icon-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 24px rgba(59, 142, 252, 0.25);
+      }
+
+      .icon-btn:disabled {
+        cursor: not-allowed;
+        opacity: 0.6;
+        transform: none;
+        box-shadow: none;
+      }
+
+      .icon-btn.recording {
+        background: linear-gradient(135deg, #ff6b6b 0%, #ffa94d 100%);
+        color: #2b0a02;
+        border-color: transparent;
+      }
+
+      .primary-btn {
+        border: none;
+        background: linear-gradient(135deg, #3b8efc 0%, #51e2c2 100%);
+        color: #03162b;
+        padding: 0.78rem 1.8rem;
+        border-radius: 999px;
+        font-size: 0.97rem;
+        font-weight: 600;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .primary-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 18px 32px rgba(59, 142, 252, 0.35);
+      }
+
+      .primary-btn:disabled {
+        cursor: not-allowed;
+        background: rgba(59, 142, 252, 0.35);
+        box-shadow: none;
+        transform: none;
+      }
+
+      .loading {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        border: 3px solid rgba(3, 22, 43, 0.12);
+        border-top-color: #03162b;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0) rotate(-1deg);
+        }
+        50% {
+          transform: translateY(-8px) rotate(1.5deg);
+        }
+        100% {
+          transform: translateY(0) rotate(-1deg);
+        }
+      }
+
+      .chat-container::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      .chat-container::-webkit-scrollbar-thumb {
+        background: rgba(139, 172, 217, 0.35);
+        border-radius: 3px;
+      }
+
+      @media (max-width: 768px) {
+        .hero {
+          padding: 2.8rem 1rem 1.8rem 1rem;
+        }
+
+        .hero h1 {
+          font-size: 2rem;
+        }
+
+        .chat-card {
+          padding: 1.5rem;
+        }
+
+        .chat-container {
+          height: 360px;
+        }
+
+        .message {
+          max-width: 90%;
+        }
+
+        textarea {
+          min-height: 90px;
+        }
+
+        .composer-buttons {
+          justify-content: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <h1>CTrix Autonomous Command</h1>
+      <p>
+        Coordinate drone sorties, stream target intel, and issue real-time CTrix
+        directives from a single mission console.
+      </p>
+    </header>
+
+    <main class="container">
+      <section class="chat-card">
+        <div class="chat-header">
+          <div>
+            <h2>
+              <span
+                style="display: inline-flex; align-items: center; gap: 0.6rem"
+              >
+                <img
+                  src="/static/logo.png"
+                  alt="CTrix drone logo"
+                  style="
+                    width: 42px;
+                    height: 42px;
+                    object-fit: contain;
+                    animation: float 6s ease-in-out infinite;
+                    filter: drop-shadow(0 6px 18px rgba(59, 142, 252, 0.35));
+                  "
+                />
+                CTrix Ops Console
+              </span>
+            </h2>
+            <p>Live link to your mobile UAV channel and tactical briefings.</p>
+          </div>
+          <div id="connectionStatus" class="status-pill connecting">
+            Connecting…
+          </div>
+        </div>
+
+        <div id="chatContainer" class="chat-container">
+          <div class="message system">
+            Welcome to CTrix Ops. Syncing UAV telemetry buffers and mission
+            context…
+          </div>
+        </div>
+
+        <div id="typingIndicator" class="typing-indicator">
+          Assistant is typing…
+        </div>
+
+        <div class="quick-commands">
+          <button
+            type="button"
+            onclick="quickMessage('Launch perimeter reconnaissance mission')"
+          >
+            Perimeter Recon
+          </button>
+          <button
+            type="button"
+            onclick="quickMessage('Request latest aerial imagery for field alpha')"
+          >
+            Aerial Imagery
+          </button>
+          <button
+            type="button"
+            onclick="quickMessage('Update waypoint grid for sector B with 30m spacing')"
+          >
+            Waypoint Grid
+          </button>
+          <button
+            type="button"
+            onclick="quickMessage('Command drone to return-to-base and recharge')"
+          >
+            RTB & Recharge
+          </button>
+        </div>
+
+        <div class="composer">
+          <textarea
+            id="messageInput"
+            placeholder="Issue CTrix flight commands, payload setups, or intel requests…"
+          ></textarea>
+          <div class="composer-actions">
+            <div class="composer-hints">
+              <small
+                >Press Enter to send. Use Shift + Enter for a new line.</small
+              >
+              <span id="speechStatus" class="speech-status"></span>
+            </div>
+            <div class="composer-buttons">
+              <button
+                id="recordBtn"
+                class="icon-btn"
+                type="button"
+                onclick="toggleRecording()"
+              >
+                🎙️ Speech Input
+              </button>
+              <button
+                id="sendBtn"
+                class="primary-btn"
+                type="button"
+                onclick="sendMessage()"
+              >
+                Ask Assistant
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const USER_ID = "pilot123";
+      const MISSION_ID = "mission456";
+      // const WS_BASE_URL = "ws://localhost:7777/ws";
+      const WS_BASE_URL = "wss://thesaurus-organizing-qualify-mistress.trycloudflare.com/ws";
+      const STT_ENDPOINT = "/mobile/transcribe";
+      const DEBUG_AUDIO_ENDPOINT = "/mobile/save-audio";
+
+      const connectionStatusEl = document.getElementById("connectionStatus");
+      const chatContainer = document.getElementById("chatContainer");
+      const typingIndicator = document.getElementById("typingIndicator");
+      const messageInput = document.getElementById("messageInput");
+      const sendBtn = document.getElementById("sendBtn");
+      const recordBtn = document.getElementById("recordBtn");
+      const speechStatusEl = document.getElementById("speechStatus");
+
+      let websocket = null;
+      let reconnectTimer = null;
+      let streamingResponse = "";
+      let currentChannelId = null;
+
+      let mediaRecorder = null;
+      let mediaStream = null;
+      let audioChunks = [];
+      let isRecording = false;
+      let speechBusy = false;
+      let speechStatusTimer = null;
+
+      function connectWebSocket() {
+        const clientId = `mobile-${USER_ID}-${MISSION_ID}`;
+        const wsUrl = `${WS_BASE_URL}/${clientId}`;
+
+        clearTimeout(reconnectTimer);
+
+        if (websocket) {
+          websocket.close();
+        }
+
+        updateStatus("connecting", "Connecting…");
+
+        websocket = new WebSocket(wsUrl);
+
+        websocket.onopen = () => {
+          updateStatus("connected", "Online");
+          addChatMessage(
+            "system",
+            "CTrix link live. Standing by for mission directives."
+          );
+        };
+
+        websocket.onmessage = (event) => {
+          try {
+            const data = JSON.parse(event.data);
+            handleWebSocketMessage(data);
+          } catch (error) {
+            console.error("Unable to parse message", error);
+          }
+        };
+
+        websocket.onclose = () => {
+          updateStatus("disconnected", "Reconnecting…");
+          scheduleReconnect();
+        };
+
+        websocket.onerror = (error) => {
+          console.error("WebSocket error", error);
+          updateStatus("disconnected", "Connection issue");
+        };
+      }
+
+      // Automatically retry the socket when the connection drops.
+      function scheduleReconnect() {
+        if (reconnectTimer) {
+          return;
+        }
+        reconnectTimer = setTimeout(() => {
+          reconnectTimer = null;
+          connectWebSocket();
+        }, 3000);
+      }
+
+      function updateStatus(state, label) {
+        connectionStatusEl.className = `status-pill ${state}`;
+        connectionStatusEl.textContent = label;
+      }
+
+      function quickMessage(message) {
+        sendMessage(message);
+      }
+
+      async function ensureChannel() {
+        if (currentChannelId) {
+          return currentChannelId;
+        }
+
+        try {
+          const response = await fetch("/mobile/create-channel", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ user_id: USER_ID, mission_id: MISSION_ID }),
+          });
+
+          const result = await response.json();
+
+          if (response.ok) {
+            currentChannelId = result.channel_id;
+            addChatMessage(
+              "system",
+              `Mobile channel ready: ${currentChannelId}`
+            );
+            return currentChannelId;
+          }
+
+          addChatMessage(
+            "error",
+            result.detail || "Unable to prepare the CTrix mobile channel."
+          );
+        } catch (error) {
+          console.error("Channel setup failed", error);
+          addChatMessage(
+            "error",
+            "Network error while preparing the CTrix channel."
+          );
+        }
+
+        return null;
+      }
+
+      async function sendMessage(overrideMessage) {
+        const message = (overrideMessage ?? messageInput.value).trim();
+
+        if (!message) {
+          messageInput.focus();
+          return;
+        }
+
+        if (!websocket || websocket.readyState !== WebSocket.OPEN) {
+          addChatMessage(
+            "error",
+            "Comm link not ready. Re-establishing CTrix channel…"
+          );
+          connectWebSocket();
+          return;
+        }
+
+        await ensureChannel();
+
+        addChatMessage("user", message);
+
+        if (!overrideMessage) {
+          messageInput.value = "";
+        }
+
+        setComposerDisabled(true);
+
+        try {
+          const response = await fetch("/mobile/stream-message", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              user_id: USER_ID,
+              mission_id: MISSION_ID,
+              message,
+              stream_mode: "websocket",
+            }),
+          });
+
+          const result = await response.json();
+
+          if (!response.ok) {
+            addChatMessage(
+              "error",
+              result.detail ||
+                "There was a problem relaying your CTrix directive."
+            );
+          }
+        } catch (error) {
+          console.error("Send message error", error);
+          addChatMessage(
+            "error",
+            "Network error while sending your directive."
+          );
+        } finally {
+          setComposerDisabled(false);
+        }
+      }
+
+      function setComposerDisabled(disabled) {
+        messageInput.disabled = disabled;
+        sendBtn.disabled = disabled;
+        if (disabled) {
+          sendBtn.innerHTML = '<span class="loading"></span> Dispatching…';
+        } else {
+          sendBtn.textContent = "Ask Assistant";
+        }
+      }
+
+      // Handles speech capture and streaming to the transcription endpoint.
+      async function toggleRecording() {
+        if (!recordBtn) {
+          return;
+        }
+
+        if (
+          !navigator.mediaDevices ||
+          !navigator.mediaDevices.getUserMedia ||
+          typeof MediaRecorder === "undefined"
+        ) {
+          setSpeechStatus(
+            "Microphone not supported in this browser.",
+            "error",
+            true
+          );
+          recordBtn.disabled = true;
+          return;
+        }
+
+        if (speechBusy) {
+          return;
+        }
+
+        if (!isRecording) {
+          try {
+            mediaStream = await navigator.mediaDevices.getUserMedia({
+              audio: true,
+            });
+            audioChunks = [];
+            mediaRecorder = new MediaRecorder(mediaStream);
+            mediaRecorder.ondataavailable = (event) => {
+              if (event.data && event.data.size > 0) {
+                audioChunks.push(event.data);
+              }
+            };
+            mediaRecorder.onstop = handleRecordingStop;
+            mediaRecorder.start();
+            isRecording = true;
+            updateRecordButton("recording");
+            setSpeechStatus("Listening… tap to stop when ready.", "info", true);
+          } catch (error) {
+            console.error("Microphone access error", error);
+            setSpeechStatus("Microphone access denied.", "error");
+            updateRecordButton("idle");
+            stopMediaStream(mediaStream);
+            mediaStream = null;
+          }
+          return;
+        }
+
+        isRecording = false;
+        if (mediaRecorder && mediaRecorder.state !== "inactive") {
+          mediaRecorder.stop();
+        }
+        stopMediaStream(mediaStream);
+        mediaStream = null;
+        setSpeechStatus("Processing audio…", "info", true);
+      }
+
+      async function handleRecordingStop() {
+        isRecording = false;
+
+        if (!audioChunks.length) {
+          updateRecordButton("idle");
+          setSpeechStatus("No audio captured.", "error");
+          stopMediaStream(mediaStream);
+          mediaStream = null;
+          audioChunks = [];
+          return;
+        }
+
+        speechBusy = true;
+        updateRecordButton("uploading");
+
+        try {
+          const wavBlob = await prepareWavBlob(audioChunks);
+          await saveAudioForDebug(wavBlob);
+          await sendAudioForTranscription(wavBlob);
+        } catch (error) {
+          console.error("Transcription error", error);
+          setSpeechStatus("Transcription failed.", "error");
+        } finally {
+          audioChunks = [];
+          speechBusy = false;
+          updateRecordButton("idle");
+          stopMediaStream(mediaStream);
+          mediaStream = null;
+        }
+      }
+
+      async function prepareWavBlob(chunks) {
+        const combinedBlob = new Blob(chunks, {
+          type: chunks[0].type || "audio/webm",
+        });
+        const arrayBuffer = await combinedBlob.arrayBuffer();
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        const audioContext = new AudioCtx();
+        const audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
+        const wavBuffer = audioBufferToWav(audioBuffer);
+        await audioContext.close();
+        return new Blob([wavBuffer], { type: "audio/wav" });
+      }
+
+      function audioBufferToWav(buffer) {
+        const numOfChannels = buffer.numberOfChannels;
+        const sampleRate = buffer.sampleRate;
+        const bitDepth = 16;
+        const interleaved = interleaveChannels(buffer, numOfChannels);
+        const dataLength = interleaved.length * (bitDepth / 8);
+        const bufferLength = 44 + dataLength;
+        const arrayBuffer = new ArrayBuffer(bufferLength);
+        const view = new DataView(arrayBuffer);
+
+        writeString(view, 0, "RIFF");
+        view.setUint32(4, 36 + dataLength, true);
+        writeString(view, 8, "WAVE");
+        writeString(view, 12, "fmt ");
+        view.setUint32(16, 16, true);
+        view.setUint16(20, 1, true);
+        view.setUint16(22, numOfChannels, true);
+        view.setUint32(24, sampleRate, true);
+        view.setUint32(28, sampleRate * numOfChannels * (bitDepth / 8), true);
+        view.setUint16(32, numOfChannels * (bitDepth / 8), true);
+        view.setUint16(34, bitDepth, true);
+        writeString(view, 36, "data");
+        view.setUint32(40, dataLength, true);
+        floatTo16BitPCM(view, 44, interleaved);
+
+        return arrayBuffer;
+      }
+
+      function interleaveChannels(buffer, numChannels) {
+        if (numChannels === 1) {
+          return buffer.getChannelData(0);
+        }
+
+        const length = buffer.length * numChannels;
+        const result = new Float32Array(length);
+        const channelData = [];
+
+        for (let channel = 0; channel < numChannels; channel += 1) {
+          channelData[channel] = buffer.getChannelData(channel);
+        }
+
+        let index = 0;
+        for (let i = 0; i < buffer.length; i += 1) {
+          for (let channel = 0; channel < numChannels; channel += 1) {
+            result[index] = channelData[channel][i];
+            index += 1;
+          }
+        }
+
+        return result;
+      }
+
+      function floatTo16BitPCM(view, offset, input) {
+        for (let i = 0; i < input.length; i += 1, offset += 2) {
+          let sample = Math.max(-1, Math.min(1, input[i]));
+          sample = sample < 0 ? sample * 32768 : sample * 32767;
+          view.setInt16(offset, sample, true);
+        }
+      }
+
+      function writeString(view, offset, string) {
+        for (let i = 0; i < string.length; i += 1) {
+          view.setUint8(offset + i, string.charCodeAt(i));
+        }
+      }
+
+      async function sendAudioForTranscription(blob) {
+        const formData = new FormData();
+        formData.append("file", blob, "recording.wav");
+        setSpeechStatus("Transcribing…", "info", true);
+
+        const response = await fetch(STT_ENDPOINT, {
+          method: "POST",
+          body: formData,
+        });
+
+        let result = null;
+        try {
+          result = await response.json();
+        } catch (error) {
+          console.error("Failed to parse transcription response", error);
+        }
+
+        if (
+          response.ok &&
+          result &&
+          typeof result.text === "string" &&
+          result.text.trim()
+        ) {
+          appendTranscriptToInput(result.text.trim());
+          setSpeechStatus("Transcript added.", "success");
+        } else {
+          const message =
+            result?.detail || response.statusText || "Transcription API error";
+          throw new Error(message);
+        }
+      }
+
+      async function saveAudioForDebug(blob) {
+        if (!DEBUG_AUDIO_ENDPOINT) {
+          return;
+        }
+
+        try {
+          const formData = new FormData();
+          formData.append("file", blob, `recording-${Date.now()}.wav`);
+          const response = await fetch(DEBUG_AUDIO_ENDPOINT, {
+            method: "POST",
+            body: formData,
+          });
+
+          if (!response.ok) {
+            console.warn(
+              "Failed to persist debug audio",
+              await response.text()
+            );
+          }
+        } catch (error) {
+          console.warn("Unable to save audio for debugging", error);
+        }
+      }
+
+      function appendTranscriptToInput(transcript) {
+        const existing = messageInput.value.trim();
+        messageInput.value = existing
+          ? `${existing} ${transcript}`.trim()
+          : transcript;
+        messageInput.focus();
+      }
+
+      function stopMediaStream(stream) {
+        if (stream) {
+          stream.getTracks().forEach((track) => track.stop());
+        }
+      }
+
+      function updateRecordButton(state) {
+        if (!recordBtn) {
+          return;
+        }
+
+        if (state === "recording") {
+          recordBtn.disabled = false;
+          recordBtn.classList.add("recording");
+          recordBtn.textContent = "⏺️ Stop Recording";
+          return;
+        }
+
+        if (state === "uploading") {
+          recordBtn.disabled = true;
+          recordBtn.classList.remove("recording");
+          recordBtn.textContent = "⌛ Transcribing…";
+          return;
+        }
+
+        recordBtn.disabled = false;
+        recordBtn.classList.remove("recording");
+        recordBtn.textContent = "🎙️ Speech Input";
+      }
+
+      function setSpeechStatus(message, tone = "info", persist = false) {
+        if (!speechStatusEl) {
+          return;
+        }
+
+        if (speechStatusTimer) {
+          clearTimeout(speechStatusTimer);
+          speechStatusTimer = null;
+        }
+
+        if (!message) {
+          speechStatusEl.textContent = "";
+          speechStatusEl.className = "speech-status";
+          return;
+        }
+
+        speechStatusEl.textContent = message;
+        speechStatusEl.className = `speech-status ${tone}`;
+
+        if (!persist) {
+          speechStatusTimer = setTimeout(() => {
+            speechStatusEl.textContent = "";
+            speechStatusEl.className = "speech-status";
+            speechStatusTimer = null;
+          }, 4000);
+        }
+      }
+
+      function initializeSpeechControls() {
+        if (!recordBtn) {
+          return;
+        }
+
+        if (
+          !navigator.mediaDevices ||
+          !navigator.mediaDevices.getUserMedia ||
+          typeof MediaRecorder === "undefined"
+        ) {
+          recordBtn.disabled = true;
+          recordBtn.title = "Microphone not supported in this browser.";
+          setSpeechStatus(
+            "Microphone not supported in this browser.",
+            "error",
+            true
+          );
+          return;
+        }
+
+        recordBtn.title = "Capture a voice directive with CTrix.";
+      }
+
+      function handleWebSocketMessage(data) {
+        switch (data.type) {
+          case "connected":
+            addChatMessage(
+              "system",
+              "CTrix uplink confirmed. Ready when you are."
+            );
+            break;
+          case "ai_thinking":
+            addChatMessage("thinking", "CTrix is thinking…");
+            showTypingIndicator();
+            streamingResponse = "";
+            break;
+          case "ai_chunk":
+            hideTypingIndicator();
+            if (streamingResponse === "") {
+              removeChatMessage("thinking");
+              addChatMessage("ai", "", true);
+            }
+            streamingResponse += data.content;
+            updateStreamingMessage(streamingResponse);
+            break;
+          case "ai_complete":
+            hideTypingIndicator();
+            finalizeStreamingMessage();
+            break;
+          case "ai_response":
+            hideTypingIndicator();
+            addChatMessage("ai", data.ai_response);
+            break;
+          case "ai_error":
+            hideTypingIndicator();
+            addChatMessage(
+              "error",
+              data.error ||
+                "Something went wrong while processing your directive."
+            );
+            break;
+          case "mission_preview":
+            hideTypingIndicator();
+            const caption = data.caption || "Latest UAV mission preview";
+            const previewHtml = `
+              <strong>${caption}</strong>
+              <img src="${data.image_data}" alt="${
+              data.filename || "Mission preview"
+            }" />
+            `;
+            addChatMessage("ai", previewHtml);
+            break;
+          default:
+            console.warn("Unhandled message type", data);
+        }
+      }
+
+      function addChatMessage(type, content, isStreaming = false) {
+        const messageEl = document.createElement("div");
+        messageEl.className = `message ${type}`;
+        messageEl.innerHTML = content;
+
+        if (isStreaming) {
+          messageEl.id = "streaming-message";
+        }
+
+        chatContainer.appendChild(messageEl);
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+      }
+
+      function updateStreamingMessage(content) {
+        const streamingMsg = document.getElementById("streaming-message");
+        if (streamingMsg) {
+          streamingMsg.innerHTML = content;
+        }
+      }
+
+      function finalizeStreamingMessage() {
+        const streamingMsg = document.getElementById("streaming-message");
+        if (streamingMsg) {
+          streamingMsg.id = "";
+        }
+      }
+
+      function removeChatMessage(type) {
+        const messages = chatContainer.querySelectorAll(`.message.${type}`);
+        if (messages.length > 0) {
+          messages[messages.length - 1].remove();
+        }
+      }
+
+      function showTypingIndicator() {
+        typingIndicator.style.display = "block";
+      }
+
+      function hideTypingIndicator() {
+        typingIndicator.style.display = "none";
+      }
+
+      messageInput.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" && !event.shiftKey) {
+          event.preventDefault();
+          sendMessage();
+        }
+      });
+
+      window.addEventListener("load", () => {
+        connectWebSocket();
+        ensureChannel();
+        initializeSpeechControls();
+      });
+    </script>
+  </body>
+</html>

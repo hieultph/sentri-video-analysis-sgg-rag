@@ -1,0 +1,6 @@
+The default configuration doesn't have TO_TEST defined, but the config file has it and the code is trying to access it. I need to add this missing key to the defaults.py file.
+# Dataset to test during evaluation - can be 'train', 'val', 'test', or None
+_C.DATASETS.TO_TEST = None
+
+config.yaml
+  TO_TEST: ""

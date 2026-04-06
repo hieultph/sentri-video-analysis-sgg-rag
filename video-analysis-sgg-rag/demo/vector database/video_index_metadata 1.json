@@ -1,0 +1,1536 @@
+{
+  "text_chunks": [
+    "Frame 1 (at 0.04s): Objects detected: truck, sky, road, tree, truck, bicycle, building. Relationships: sky over truck; sky over tree; truck driving on road; truck in front of tree; tree beside road; tree beside truck; bicycle driving on road; truck driving on road; sky over building; road attached to truck.",
+    "Frame 2 (at 0.08s): Objects detected: truck, sky, bicycle, road, bicycle, tree, building, pavement. Relationships: sky over truck; sky over tree; sky over building; truck driving on road; bicycle driving on road; truck in front of tree; tree beside truck; truck parked on pavement; bicycle driving on road; tree beside road; truck beside building; road attached to pavement; tree beside building; road attached to truck; bicycle parked on pavement; building beside road; bicycle parked on pavement; pavement attached to road; building beside truck.",
+    "Frame 3 (at 0.12s): Objects detected: truck, sky, bicycle, road, tree, bicycle, building. Relationships: sky over truck; sky over tree; sky over building; bicycle driving on road; truck driving on road; truck in front of tree; tree beside truck; tree beside road; truck beside building; tree beside building; bicycle driving on road; road attached to truck; building beside truck; building beside road.",
+    "Frame 4 (at 0.16s): Objects detected: truck, sky, bicycle, road, tree, building, person, person. Relationships: sky over truck; sky over tree; sky over building; truck driving on road; bicycle driving on road; truck in front of tree; tree beside truck; tree beside road; truck beside building; person riding bicycle; tree beside building; building beside truck; building beside road; road attached to truck; person driving truck.",
+    "Frame 5 (at 0.20s): Objects detected: truck, sky, bicycle, road, tree, water, building. Relationships: sky over truck; sky over tree; sky over building; truck driving on road; truck in front of tree; bicycle driving on road; tree beside truck; tree beside road; tree beside building; truck beside building; building beside truck; building beside road; tree beside water; road attached to truck; building beside water; truck beside water; building beside tree.",
+    "Frame 6 (at 0.24s): Objects detected: truck, sky, bicycle, water, road, tree, building. Relationships: sky over truck; sky over tree; sky over building; truck driving on road; truck in front of tree; bicycle driving on road; tree beside truck; tree beside road; tree beside water; truck beside building; building beside truck; tree beside building; building beside road; road attached to truck; building beside water; truck beside water; water attached to truck; building beside tree.",
+    "Frame 7 (at 0.28s): Objects detected: truck, sky, bicycle, water, road, tree, building, person, person. Relationships: sky over truck; sky over tree; sky over building; truck driving on road; bicycle driving on road; truck in front of tree; tree beside truck; tree beside road; truck in front of building; building beside truck; building beside road; tree beside building; tree beside water; road attached to truck; building beside water; person driving truck; truck on water; person riding bicycle; water attached to truck; building beside tree.",
+    "Frame 8 (at 0.32s): Objects detected: truck, sky, bicycle, road, tree, building, person, water, pavement. Relationships: sky over truck; sky over tree; sky over building; truck driving on road; bicycle driving on road; person riding bicycle; truck in front of tree; tree beside truck; truck in front of building; tree beside road; building beside truck; tree beside building; building beside road; road attached to truck; tree beside water; person walking on road; building beside tree; building beside water; truck parked on pavement.",
+    "Frame 9 (at 0.36s): Objects detected: truck, sky, bicycle, road, building, pavement, tree, water, person. Relationships: sky over truck; sky over building; sky over tree; truck parked on pavement; truck driving on road; bicycle driving on road; truck in front of tree; tree beside truck; bicycle parked on pavement; road attached to pavement; truck in front of building; building beside truck; tree beside road; pavement attached to road; building beside road; tree beside building; road attached to truck; tree beside water; building beside pavement; person riding bicycle; pavement beside truck; building beside tree; building beside water; pavement attached to building.",
+    "Frame 10 (at 0.40s): Objects detected: truck, sky, bicycle, road, person, building, tree, pavement, water. Relationships: sky over truck; sky over building; sky over tree; person riding bicycle; truck driving on road; bicycle driving on road; truck in front of tree; tree beside truck; truck parked on pavement; tree beside road; truck in front of building; building beside truck; building beside road; tree beside building; road attached to pavement; person walking on road; road attached to truck; pavement attached to road; bicycle parked on pavement; building beside tree; tree beside water; bicycle beside building.",
+    "Frame 11 (at 0.44s): Objects detected: sky, truck, bicycle, road, building, tree, water, person. Relationships: sky over truck; sky over building; sky over tree; truck driving on road; bicycle driving on road; truck in front of tree; tree beside truck; person riding bicycle; building beside road; truck in front of building; tree beside road; tree beside building; building beside truck; road attached to truck; building beside water; tree beside water; building beside tree.",
+    "Frame 12 (at 0.48s): Objects detected: truck, sky, road, bicycle, building, tree, person. Relationships: sky over truck; sky over building; sky over tree; truck driving on road; bicycle driving on road; tree beside road; building beside road; truck in front of tree; tree beside truck; tree beside building; truck in front of building; building beside truck; person riding bicycle; road attached to truck; building beside tree; person walking on road.",
+    "Frame 13 (at 0.52s): Objects detected: sky, truck, road, bicycle, building, tree, person. Relationships: sky over truck; sky over building; sky over tree; bicycle driving on road; truck driving on road; person riding bicycle; tree beside road; building beside road; truck in front of tree; tree beside truck; tree beside building; truck in front of building; building beside truck; person walking on road; road attached to truck; building beside tree.",
+    "Frame 14 (at 0.56s): Objects detected: truck, sky, road, bicycle, tree, building, person. Relationships: sky over truck; sky over tree; sky over building; truck driving on road; bicycle driving on road; tree beside road; building beside road; truck in front of tree; tree beside truck; person riding bicycle; tree beside building; truck in front of building; building beside truck; road attached to truck; person walking on road; building beside tree.",
+    "Frame 15 (at 0.60s): Objects detected: sky, truck, bicycle, road, tree, water, building, person. Relationships: sky over truck; sky over tree; sky over building; bicycle driving on road; truck driving on road; tree beside road; truck in front of tree; tree beside truck; person riding bicycle; building beside road; tree beside water; tree beside building; road attached to truck; truck in front of building; building beside truck; person walking on road; building beside water; truck on water; building beside tree; water beside road; road beside tree.",
+    "Frame 16 (at 0.64s): Objects detected: truck, sky, bicycle, road, water, tree, building, person. Relationships: sky over truck; sky over tree; bicycle driving on road; truck driving on road; sky over building; tree beside road; truck in front of tree; person riding bicycle; tree beside truck; tree beside water; building beside road; road attached to truck; tree beside building; person walking on road; truck in front of building; truck on water; water beside road; building beside truck; building beside water; building beside tree.",
+    "Frame 17 (at 0.68s): Objects detected: sky, road, bicycle, truck, tree, person, building. Relationships: sky over truck; sky over tree; bicycle driving on road; sky over building; person riding bicycle; tree beside road; truck driving on road; truck in front of tree; tree beside truck; building beside road; person walking on road; tree beside building; road attached to truck; truck in front of building; building beside truck; building beside tree.",
+    "Frame 18 (at 0.72s): Objects detected: sky, road, bicycle, tree, truck, water, building, person. Relationships: sky over tree; sky over truck; bicycle driving on road; sky over building; tree beside road; truck driving on road; building beside road; person riding bicycle; truck in front of tree; tree beside building; tree beside truck; road attached to truck; water beside road.",
+    "Frame 19 (at 0.76s): Objects detected: road, sky, bicycle, truck, tree, building, person, pavement. Relationships: sky over truck; sky over tree; truck driving on road; bicycle driving on road; tree beside road; sky over building; truck in front of tree; tree beside truck; person riding bicycle; building beside road; road attached to truck; tree beside building; person walking on road; truck in front of building; road attached to pavement; road beside tree.",
+    "Frame 20 (at 0.80s): Objects detected: road, sky, bicycle, truck, tree, building, person. Relationships: sky over truck; sky over tree; truck driving on road; bicycle driving on road; tree beside road; sky over building; truck in front of tree; person riding bicycle; tree beside truck; building beside road; road attached to truck; person walking on road; tree beside building; truck in front of building.",
+    "Frame 21 (at 0.84s): Objects detected: road, sky, bicycle, tree, truck, building, person. Relationships: sky over tree; sky over truck; tree beside road; bicycle driving on road; truck driving on road; sky over building; truck in front of tree; tree beside truck; person riding bicycle; building beside road; tree beside building; road attached to truck; road beside tree; person walking on road.",
+    "Frame 22 (at 0.88s): Objects detected: sky, road, tree, bicycle, truck, building, train, person. Relationships: sky over tree; sky over truck; tree beside road; sky over building; truck driving on road; bicycle driving on road; truck in front of tree; building beside road; sky over train; tree beside truck; tree beside building; road attached to truck; train driving on road; tree beside train; road beside tree; person riding bicycle.",
+    "Frame 23 (at 0.92s): Objects detected: road, sky, bicycle, tree, truck, building, person. Relationships: sky over tree; sky over truck; bicycle driving on road; tree beside road; sky over building; truck driving on road; person riding bicycle; truck in front of tree; building beside road; tree beside truck; tree beside building; road attached to truck; person walking on road; road beside tree; building beside tree; truck in front of building.",
+    "Frame 24 (at 0.96s): Objects detected: road, sky, bicycle, tree, truck, person, building, train. Relationships: sky over tree; sky over truck; bicycle driving on road; tree beside road; sky over building; person riding bicycle; truck driving on road; building beside road; truck in front of tree; tree beside building; person walking on road; tree beside truck; road attached to truck; sky over train; building beside tree; road beside tree.",
+    "Frame 25 (at 1.00s): Objects detected: road, sky, tree, bicycle, truck, building, person. Relationships: sky over tree; sky over truck; tree beside road; sky over building; truck driving on road; bicycle driving on road; building beside road; truck in front of tree; person riding bicycle; tree beside truck; tree beside building; road attached to truck; person walking on road; truck in front of building; road beside tree; building beside tree; building beside truck.",
+    "Frame 26 (at 1.04s): Objects detected: road, sky, bicycle, tree, truck, building, person. Relationships: sky over tree; sky over truck; bicycle driving on road; tree beside road; truck driving on road; sky over building; truck in front of tree; person riding bicycle; tree beside truck; building beside road; road attached to truck; tree beside building; person walking on road; road beside tree; truck in front of building.",
+    "Frame 27 (at 1.08s): Objects detected: road, sky, bicycle, tree, truck, building, person. Relationships: sky over tree; sky over truck; tree beside road; bicycle driving on road; truck driving on road; truck in front of tree; tree beside truck; road attached to truck; sky over building; road beside tree; person riding bicycle.",
+    "Frame 28 (at 1.12s): Objects detected: road, sky, bicycle, truck, tree, person, building, person. Relationships: sky over tree; sky over truck; bicycle driving on road; tree beside road; truck driving on road; sky over building; person riding bicycle; person riding bicycle; building beside road; person walking on road; truck in front of tree; tree beside truck; road attached to truck; person walking on road; tree beside building.",
+    "Frame 29 (at 1.16s): Objects detected: road, sky, truck, tree, bicycle, person, building, bus. Relationships: sky over tree; sky over truck; sky over building; tree beside road; truck driving on road; bicycle driving on road; person riding bicycle; building beside road; person walking on road; truck in front of tree; sky over bus; road attached to truck; tree beside truck; bus driving on road; tree beside building.",
+    "Frame 30 (at 1.20s): Objects detected: road, sky, truck, bicycle, tree, building, person, person. Relationships: sky over tree; sky over truck; tree beside road; truck driving on road; bicycle driving on road; sky over building; building beside road; person riding bicycle; truck in front of tree; tree beside truck; person walking on road; tree beside building; road attached to truck; road beside tree; person riding bicycle; truck in front of building; building beside tree.",
+    "Frame 31 (at 1.24s): Objects detected: road, sky, bicycle, tree, truck, building, person, person. Relationships: sky over tree; sky over truck; bicycle driving on road; tree beside road; truck driving on road; sky over building; truck in front of tree; building beside road; tree beside truck; road attached to truck; person riding bicycle; person riding bicycle; road beside tree; person walking on road; tree beside building.",
+    "Frame 32 (at 1.28s): Objects detected: road, sky, tree, truck, bicycle, bus, building. Relationships: sky over tree; tree beside road; sky over truck; bicycle driving on road; truck driving on road; sky over bus; bus driving on road; truck in front of tree; sky over building; tree beside truck; tree beside bus; road beside tree; building beside road; road attached to truck.",
+    "Frame 33 (at 1.32s): Objects detected: road, sky, tree, truck, bicycle, horse, bus, building. Relationships: sky over tree; sky over truck; tree beside road; truck driving on road; sky over bus; horse walking on road; bicycle driving on road; bus driving on road; truck in front of tree; tree beside truck; sky over building; tree beside bus; road attached to truck; road beside tree; bus in front of tree.",
+    "Frame 34 (at 1.36s): Objects detected: road, sky, tree, truck, horse, bicycle, building, bus. Relationships: sky over tree; sky over truck; tree beside road; truck driving on road; horse walking on road; truck in front of tree; bicycle driving on road; tree beside truck; sky over building; road attached to truck; road beside tree; sky over bus.",
+    "Frame 35 (at 1.40s): Objects detected: sky, road, tree, bicycle, truck, bus, building, horse. Relationships: sky over tree; tree beside road; sky over truck; sky over bus; bus driving on road; truck driving on road; sky over building; bicycle driving on road; horse walking on road; truck in front of tree; tree beside bus; bus in front of tree; building beside road; road beside tree.",
+    "Frame 36 (at 1.44s): Objects detected: sky, road, tree, truck, horse, bicycle, building, train. Relationships: sky over tree; tree beside road; sky over truck; truck driving on road; horse walking on road; truck in front of tree; sky over building; tree beside truck; bicycle driving on road; sky over train; road beside tree.",
+    "Frame 37 (at 1.48s): Objects detected: sky, tree, road, water, truck, bicycle, train, building. Relationships: sky over tree; tree beside road; sky over truck; bicycle driving on road; tree beside water; truck driving on road; sky over building; sky over train; truck in front of tree; tree beside truck.",
+    "Frame 38 (at 1.52s): Objects detected: sky, road, tree, truck, bicycle, horse, building. Relationships: sky over tree; sky over truck; tree beside road; truck driving on road; truck in front of tree; sky over building; tree beside truck; horse walking on road; bicycle driving on road.",
+    "Frame 39 (at 1.56s): Objects detected: sky, tree, road, horse, water, train, bicycle, building. Relationships: sky over tree; sky over train; tree beside road; horse walking on road; tree beside train; tree beside water; train driving on road; train in front of tree; water beside train; bicycle driving on road; sky over building.",
+    "Frame 40 (at 1.60s): Objects detected: sky, tree, water, horse, road, train, truck, building. Relationships: sky over tree; sky over train; tree beside water; tree beside road; horse walking on road; sky over truck; tree beside train; sky over building; train in front of tree; train driving on road; truck in front of tree; water beside train.",
+    "Frame 41 (at 1.64s): Objects detected: sky, tree, truck, road, horse, water, grass, building. Relationships: sky over tree; sky over truck; tree beside road; horse walking on road; truck in front of tree; truck driving on road; tree beside water; tree beside truck; sky over building; sky over grass; truck parked on water.",
+    "Frame 42 (at 1.68s): Objects detected: sky, tree, water, road, train, bicycle, truck, grass, building. Relationships: sky over tree; sky over train; tree beside water; tree beside road; sky over truck; tree beside train; train driving on road; bicycle driving on road; sky over building; train in front of tree; sky over grass.",
+    "Frame 43 (at 1.72s): Objects detected: sky, tree, road, train, water, horse, grass, building. Relationships: sky over tree; sky over train; tree beside road; tree beside train; train driving on road; tree beside water; train in front of tree; horse walking on road; sky over building; sky over grass.",
+    "Frame 44 (at 1.76s): Objects detected: sky, tree, water, train, road, river, horse, building. Relationships: sky over tree; sky over train; tree beside water; tree beside train; tree beside road; tree beside river; train in front of tree; train driving on road; sky over building; water beside train; horse walking on road.",
+    "Frame 45 (at 1.80s): Objects detected: sky, tree, road, water, truck, horse, building. Relationships: sky over tree; sky over truck; tree beside road; tree beside water; truck driving on road; truck in front of tree; sky over building; tree beside truck; horse walking on road; water beside road.",
+    "Frame 46 (at 1.84s): Objects detected: sky, tree, river, road, water, truck, train, building. Relationships: sky over tree; tree beside river; tree beside road; sky over truck; tree beside water; sky over train; sky over building.",
+    "Frame 47 (at 1.88s): Objects detected: sky, tree, road, truck, car, river, building. Relationships: sky over tree; sky over truck; tree beside road; car driving on road; tree beside river; truck driving on road; truck in front of tree; sky over building; tree beside truck; truck in front of car.",
+    "Frame 48 (at 1.92s): Objects detected: sky, car, tree, road, river, truck, building. Relationships: sky over tree; car driving on road; sky over truck; tree beside road; tree beside river; truck in front of car; car beside truck; sky over building; truck driving on road; truck in front of tree; tree beside truck.",
+    "Frame 49 (at 1.96s): Objects detected: sky, car, road, tree, truck, building. Relationships: sky over tree; car driving on road; tree beside road; truck driving on road; sky over building; truck in front of car; car beside truck; road beside tree.",
+    "Frame 50 (at 2.00s): Objects detected: sky, road, tree, car, truck, bus, building. Relationships: sky over tree; car driving on road; tree beside road; sky over truck; truck driving on road; sky over bus; sky over building; car beside truck; truck in front of car; bus driving on road; truck in front of tree; road beside tree; bus in front of car; tree beside building; car beside bus; tree beside car; tree beside truck; tree beside bus; building beside road.",
+    "Frame 51 (at 2.04s): Objects detected: car, sky, tree, road, bicycle, building, train, bus. Relationships: sky over tree; car driving on road; tree beside road; sky over building; bicycle driving on road; sky over train; tree beside car; sky over bus; tree beside building; road beside tree; building beside road.",
+    "Frame 52 (at 2.08s): Objects detected: sky, road, tree, car, truck, truck, person, building. Relationships: sky over tree; tree beside road; car driving on road; truck driving on road; sky over truck; sky over building; truck driving on road; person walking on road; tree beside building; building beside road; tree beside truck; road beside tree.",
+    "Frame 53 (at 2.12s): Objects detected: sky, car, road, tree, person, person, building, truck, motorcycle, grass. Relationships: sky over tree; car driving on road; tree beside road; sky over building; person walking on road; person walking on road; sky over truck; tree beside building; building beside road; tree beside car; truck driving on road; motorcycle driving on road; road beside tree; sky over grass.",
+    "Frame 54 (at 2.16s): Objects detected: car, sky, road, tree, person, building, grass, person, bicycle, train. Relationships: sky over tree; car driving on road; tree beside road; sky over building; person walking on road; tree beside car; building beside road; tree beside building; sky over grass; bicycle driving on road; road beside tree; sky over train; car beside building; person walking on road.",
+    "Frame 55 (at 2.20s): Objects detected: car, sky, road, tree, motorcycle, building, grass, train. Relationships: sky over tree; car driving on road; tree beside road; sky over building; motorcycle driving on road; sky over train; tree beside building; tree beside car; building beside road; sky over grass; road beside tree; car beside building; train driving on road.",
+    "Frame 56 (at 2.24s): Objects detected: sky, road, tree, car, bicycle, person, person, building, bicycle. Relationships: sky over tree; car driving on road; tree beside road; sky over building; bicycle driving on road; person walking on road; person walking on road; tree beside building; person riding bicycle; building beside road; tree beside car; road beside tree; car in front of tree; bicycle driving on road; car beside building.",
+    "Frame 57 (at 2.28s): Objects detected: sky, road, tree, bicycle, person, truck, bicycle, person, person, building. Relationships: sky over tree; person riding bicycle; bicycle driving on road; tree beside road; person walking on road; truck driving on road; bicycle driving on road; sky over building; person riding bicycle; person walking on road; tree beside truck; tree beside building; building beside road; truck beside tree; road beside tree; person walking on road; truck beside building; building beside tree.",
+    "Frame 58 (at 2.32s): Objects detected: sky, bicycle, tree, car, road, person, bicycle, person, building, bus, person. Relationships: sky over tree; person riding bicycle; bicycle driving on road; tree beside road; car driving on road; sky over building; person walking on road; sky over bus; person riding bicycle; bicycle driving on road; person walking on road; tree beside building; bus driving on road; person beside person; building beside road; car beside tree; tree beside car; car beside building; person riding bicycle; road beside tree.",
+    "Frame 59 (at 2.36s): Objects detected: sky, car, bicycle, tree, road, person, bus, building. Relationships: sky over tree; person riding bicycle; car driving on road; bicycle driving on road; tree beside road; sky over bus; person walking on road; sky over building; bus driving on road; car in front of tree; tree beside car; tree beside building; building beside road; person beside tree; car beside building; tree beside bus; road beside tree.",
+    "Frame 60 (at 2.40s): Objects detected: sky, road, tree, car, bicycle, train, bus, person, building. Relationships: sky over tree; car driving on road; tree beside road; bicycle driving on road; sky over train; sky over bus; sky over building; person riding bicycle; bus driving on road; person walking on road; train driving on road; car in front of tree; tree beside train; building beside road; tree beside building; tree beside car; tree beside bus; road beside tree; train in front of tree; car beside building.",
+    "Frame 61 (at 2.44s): Objects detected: sky, bicycle, road, tree, car, person, bus, bicycle, building, person. Relationships: sky over tree; person riding bicycle; bicycle driving on road; car driving on road; tree beside road; person walking on road; sky over building; sky over bus; bus driving on road; bicycle driving on road; person riding bicycle; tree beside building; person walking on road; building beside road; car in front of tree; tree beside car; road beside tree; car beside building.",
+    "Frame 62 (at 2.48s): Objects detected: sky, bicycle, car, tree, road, bicycle, person, bus, person, building. Relationships: sky over tree; person riding bicycle; bicycle driving on road; car driving on road; tree beside road; person walking on road; bicycle driving on road; sky over building; sky over bus; person riding bicycle; bus driving on road; person walking on road; tree beside building; building beside road; tree beside car; road beside tree; car in front of tree; building beside tree.",
+    "Frame 63 (at 2.52s): Objects detected: sky, car, tree, bicycle, bicycle, road, person, building, bus. Relationships: sky over tree; car driving on road; bicycle driving on road; sky over building; tree beside road; bicycle driving on road; person riding bicycle; sky over bus; tree beside building; person walking on road; bus driving on road; building beside road; car beside building; tree beside car; building beside tree.",
+    "Frame 64 (at 2.56s): Objects detected: sky, car, bicycle, tree, person, road, water, bicycle, person, bicycle, building, handbag. Relationships: sky over tree; person riding bicycle; bicycle driving on road; car driving on road; sky over building; tree beside road; person walking on road; tree beside water; person riding bicycle; tree beside building; bicycle driving on road; person carrying handbag; bicycle driving on road; building beside road; building beside tree; person walking on road; tree beside car; car in front of tree.",
+    "Frame 65 (at 2.60s): Objects detected: sky, car, tree, road, bicycle, person, bicycle, bicycle, person, building, building. Relationships: sky over tree; car driving on road; bicycle driving on road; person riding bicycle; tree beside road; person walking on road; sky over building; bicycle driving on road; bicycle driving on road; person riding bicycle; tree beside building; building beside road; person walking on road; road beside tree; sky over building.",
+    "Frame 66 (at 2.64s): Objects detected: sky, car, road, tree, bicycle, bicycle, person, person, bicycle, building, person. Relationships: sky over tree; car driving on road; bicycle driving on road; tree beside road; sky over building; person riding bicycle; bicycle driving on road; person walking on road; bicycle driving on road; person walking on road; person riding bicycle; tree beside building; person riding bicycle; building beside road; car beside building; person walking on road; car in front of tree; road beside tree; building beside tree.",
+    "Frame 67 (at 2.68s): Objects detected: sky, bicycle, car, water, tree, person, road, bicycle, bicycle, person, building, person, bicycle, horse, building. Relationships: sky over tree; person riding bicycle; bicycle driving on road; car driving on road; tree beside road; tree beside water; person walking on road; sky over building; bicycle driving on road; bicycle driving on road; bicycle on water; person riding bicycle; person walking on road; person riding bicycle; tree beside building; car parked on water; building beside road; car in front of tree; water beside road; building beside water; horse walking on road; road beside tree; sky over building; car beside building; person standing on water; bicycle driving on road.",
+    "Frame 68 (at 2.72s): Objects detected: car, water, sky, tree, bicycle, bicycle, road, bicycle, bicycle, person, person, person, person, building. Relationships: sky over tree; car driving on road; bicycle driving on road; tree beside water; tree beside road; person riding bicycle; sky over building; bicycle driving on road; person riding bicycle; bicycle on water; bicycle driving on road; bicycle driving on road; person riding bicycle; person walking on road; car parked on water; tree beside building; person walking on road; person riding bicycle; building beside water; bicycle parked on water; car beside building; building beside road; person walking on road; water beside road; car in front of tree; person walking on road; building beside tree.",
+    "Frame 69 (at 2.76s): Objects detected: water, sky, car, bicycle, tree, bicycle, person, person, road, bicycle, person, building, bicycle. Relationships: sky over tree; person riding bicycle; tree beside water; person riding bicycle; sky over building; bicycle driving on road; car driving on road; bicycle on water; tree beside road; bicycle driving on road; tree beside building; person walking on road; car parked on water; person walking on road; building beside water; bicycle on water; car beside building; bicycle driving on road; car in front of tree; person standing on water; person riding bicycle; person beside water; building beside tree; building beside road.",
+    "Frame 70 (at 2.80s): Objects detected: water, sky, car, bicycle, tree, road, bicycle, person, person, bicycle, bicycle, building. Relationships: sky over tree; person riding bicycle; bicycle driving on road; car driving on road; tree beside water; tree beside road; bicycle driving on road; sky over building; person walking on road; bicycle on water; person riding bicycle; person walking on road; tree beside building; bicycle driving on road; car parked on water; bicycle driving on road; building beside road; building beside water; bicycle parked on water; water beside road; car beside building; person standing on water; car in front of tree; building beside tree; road beside tree; water beside tree.",
+    "Frame 71 (at 2.84s): Objects detected: water, sky, bicycle, tree, person, bicycle, car, person, bicycle, road, truck, motorcycle, bicycle, building, person. Relationships: sky over tree; person riding bicycle; tree beside water; sky over building; bicycle driving on road; person riding bicycle; tree beside road; bicycle driving on road; person riding motorcycle; car driving on road; person walking on road; bicycle on water; bicycle driving on road; truck driving on road; tree beside building; bicycle on water; motorcycle driving on road; building beside water; person riding bicycle; person walking on road; bicycle driving on road; person standing on water; truck parked on water; car parked on water; building beside road; water beside road; motorcycle parked on water; building beside tree.",
+    "Frame 72 (at 2.88s): Objects detected: water, sky, car, bicycle, tree, bicycle, bicycle, person, person, person, building, person. Relationships: sky over tree; tree beside water; sky over building; bicycle on water; person riding bicycle; person riding bicycle; person riding bicycle; car parked on water; tree beside building; car beside bicycle; bicycle beside car; building beside water; bicycle on water; car in front of tree; person riding bicycle; building beside tree.",
+    "Frame 73 (at 2.92s): Objects detected: sky, bicycle, water, car, tree, bicycle, person, person, road, bicycle, bicycle, person, building, car. Relationships: sky over tree; person riding bicycle; tree beside water; bicycle driving on road; sky over building; car driving on road; person riding bicycle; bicycle on water; tree beside road; bicycle driving on road; car parked on water; tree beside building; person walking on road; person walking on road; person riding bicycle; building beside water; bicycle driving on road; car beside bicycle; car in front of tree; bicycle driving on road; person standing on water; building beside road; water beside road; building beside tree; car beside car; car beside building; bicycle beside car.",
+    "Frame 74 (at 2.96s): Objects detected: sky, water, bicycle, tree, car, bicycle, person, person, bicycle, road, bicycle, building, person. Relationships: sky over tree; person riding bicycle; tree beside water; person riding bicycle; sky over building; bicycle driving on road; bicycle on water; car driving on road; tree beside road; bicycle driving on road; person walking on road; tree beside building; person walking on road; building beside water; bicycle driving on road; person riding bicycle; person standing on water; bicycle on water; car beside water; bicycle driving on road; car beside bicycle; water beside road; building beside road; building beside tree; person in water.",
+    "Frame 75 (at 3.00s): Objects detected: water, car, sky, bicycle, bicycle, tree, person, person, building. Relationships: sky over tree; person riding bicycle; person riding bicycle; tree beside water; sky over building; bicycle on water; car beside bicycle; bicycle on water; tree beside building; building beside water; person in water; person in water; car beside water; bicycle beside car.",
+    "Frame 76 (at 3.04s): Objects detected: water, sky, bicycle, car, tree, bicycle, person, person, building. Relationships: sky over tree; tree beside water; person riding bicycle; person riding bicycle; sky over building; bicycle on water; tree beside building; building beside water; bicycle beside car; car beside water.",
+    "Frame 77 (at 3.08s): Objects detected: water, sky, bicycle, bicycle, tree, person, person, bicycle, person, building. Relationships: sky over tree; person riding bicycle; tree beside water; person riding bicycle; sky over building; tree beside building; person riding bicycle; building beside water; bicycle on water; person in water.",
+    "Frame 78 (at 3.12s): Objects detected: water, sky, bicycle, tree, person, bicycle, person, building, bus. Relationships: sky over tree; tree beside water; person riding bicycle; sky over building; tree beside building; building beside water; sky over bus; person riding bicycle.",
+    "Frame 79 (at 3.16s): Objects detected: sky, water, bicycle, tree, person, bicycle, person, building. Relationships: sky over tree; person riding bicycle; tree beside water; sky over building; person riding bicycle; tree beside building; person in water; building beside water.",
+    "Frame 80 (at 3.20s): Objects detected: sky, water, bicycle, tree, person, person, bicycle, building. Relationships: sky over tree; person riding bicycle; tree beside water; sky over building; person riding bicycle; tree beside building; person in water; building beside water.",
+    "Frame 81 (at 3.24s): Objects detected: sky, water, bicycle, tree, person, bicycle, person, building. Relationships: sky over tree; person riding bicycle; tree beside water; person riding bicycle; sky over building; tree beside building; building beside water; person in water.",
+    "Frame 82 (at 3.28s): Objects detected: car, sky, water, bicycle, tree, person, bicycle, person, building. Relationships: sky over tree; person riding bicycle; tree beside water; sky over building; person riding bicycle; tree beside building; car beside water; bicycle beside car; building beside water; person in water.",
+    "Frame 83 (at 3.32s): Objects detected: sky, water, tree, person, bicycle, building, building. Relationships: sky over tree; tree beside water; sky over building; person riding bicycle; tree beside building; building beside water; sky over building.",
+    "Frame 84 (at 3.36s): Objects detected: sky, water, tree, car, person, building, truck, building. Relationships: sky over tree; tree beside water; sky over building; sky over truck; tree beside building; car beside water; sky over building; building beside water; person beside car.",
+    "Frame 85 (at 3.40s): Objects detected: sky, water, tree, boat, building, building. Relationships: sky over tree; tree beside water; boat parked on water; sky over building; tree beside building; building beside water; sky over building.",
+    "Frame 86 (at 3.44s): Objects detected: sky, water, tree, building, building, boat. Relationships: sky over tree; tree beside water; sky over building; tree beside building; building beside water; sky over boat; sky over building.",
+    "Frame 87 (at 3.48s): Objects detected: sky, water, tree, bicycle, boat, person, building, building. Relationships: sky over tree; tree beside water; sky over boat; sky over building; boat parked on water; tree beside building; building beside water; person riding bicycle; sky over building.",
+    "Frame 88 (at 3.52s): Objects detected: sky, water, tree, boat, building. Relationships: sky over tree; sky over boat; tree beside water; sky over building; boat parked on water; tree beside building; building beside water.",
+    "Frame 89 (at 3.56s): Objects detected: sky, water, tree, building. Relationships: sky over tree; tree beside water; sky over building; tree beside building; building beside water.",
+    "Frame 90 (at 3.60s): Objects detected: sky, bicycle, car, tree, water, road, person, bicycle, person, building. Relationships: sky over tree; bicycle driving on road; tree beside water; sky over building; car driving on road; tree beside road; bicycle on water; bicycle driving on road; tree beside building; person walking on road; person walking on road; car parked on water; building beside water.",
+    "Frame 91 (at 3.64s): Objects detected: sky, water, tree, car, building. Relationships: sky over tree; tree beside water; sky over building; tree beside building; car parked on water; building beside water.",
+    "Frame 92 (at 3.68s): Objects detected: sky, car, water, tree, person, building, person, building. Relationships: sky over tree; tree beside water; sky over building; car parked on water; tree beside building; building beside water; person driving car; person standing on water; sky over building.",
+    "Frame 93 (at 3.72s): Objects detected: car, sky, water, tree, dog, person, person, building, horse. Relationships: sky over tree; tree beside water; sky over building; person pulling dog; person pulling dog; car parked on water; tree beside building; building beside water; person riding horse; person riding horse; car in front of tree.",
+    "Frame 94 (at 3.76s): Objects detected: sky, water, car, person, tree, building, handbag. Relationships: sky over tree; tree beside water; sky over building; car parked on water; person carrying handbag; tree beside building; person standing on water; building beside water.",
+    "Frame 95 (at 3.80s): Objects detected: water, car, sky, person, tree, bird, building, building, building. Relationships: sky over tree; tree beside water; sky over building; car parked on water; bird on water; person standing on water; tree beside building; building beside water; sky over building; sky over building.",
+    "Frame 96 (at 3.84s): Objects detected: car, sky, water, tree, road, person, boat, bicycle, bicycle, building. Relationships: sky over tree; car driving on road; tree beside water; tree beside road; sky over building; car parked on water; person walking on road; bicycle driving on road; person in water; tree beside building; bicycle driving on road; water on road; boat parked on water.",
+    "Frame 97 (at 3.88s): Objects detected: sky, car, water, tree, road, person, person, bird, bicycle, bicycle, building. Relationships: sky over tree; car driving on road; tree beside water; tree beside road; sky over building; person walking on road; car parked on water; person in water; water on road; bicycle driving on road; person walking on road; person in water; bicycle driving on road; bird in water.",
+    "Frame 98 (at 3.92s): Objects detected: water, sky, boat, tree, building. Relationships: sky over tree; tree beside water; boat parked on water; sky over building.",
+    "Frame 99 (at 3.96s): Objects detected: sky, water, tree, bird, boat, building. Relationships: sky over tree; tree beside water; sky over building; bird in water; boat parked on water.",
+    "Frame 100 (at 4.00s): Objects detected: sky, water, tree, building. Relationships: sky over tree; tree beside water; sky over building.",
+    "Frame 101 (at 4.04s): Objects detected: water, sky, tree, person, bird, building, building. Relationships: sky over tree; tree beside water; person in water; sky over building; bird in water; sky over building.",
+    "Frame 102 (at 4.08s): Objects detected: water, sky, tree, bus, boat, building. Relationships: sky over tree; tree beside water; sky over building; boat parked on water; bus parked on water.",
+    "Frame 103 (at 4.12s): Objects detected: water, sky, tree, toilet, building. Relationships: sky over tree; tree beside water; sky over building; toilet beside water; building beside water; tree beside building.",
+    "Frame 104 (at 4.16s): Objects detected: water, sky, tree, building, boat. Relationships: sky over tree; tree beside water; sky over building; tree beside building; building beside water; boat parked on water.",
+    "Frame 105 (at 4.20s): Objects detected: water, sky, tree, toilet, building. Relationships: sky over tree; tree beside water; sky over building; tree beside building; toilet beside water; building beside water; water beside toilet.",
+    "Frame 106 (at 4.24s): Objects detected: water, sky, tree, building. Relationships: sky over tree; tree beside water; sky over building; tree beside building; building beside water.",
+    "Frame 107 (at 4.28s): Objects detected: water, sky, tree, wine glass, building. Relationships: sky over tree; tree beside water; sky over building; tree beside building; wine glass on water; building beside water; water enclosing wine glass.",
+    "Frame 108 (at 4.32s): Objects detected: water, sky, tree, bicycle, person, boat, building. Relationships: sky over tree; tree beside water; sky over building; tree beside building; boat parked on water; building beside water; person riding bicycle; water beside tree.",
+    "Frame 109 (at 4.36s): Objects detected: water, sky, tree, boat, bicycle, person, building. Relationships: sky over tree; tree beside water; boat parked on water; sky over building; tree beside building; building beside water; person riding bicycle.",
+    "Frame 110 (at 4.40s): Objects detected: water, sky, tree, boat, building. Relationships: sky over tree; tree beside water; boat parked on water; sky over building; tree beside building.",
+    "Frame 111 (at 4.44s): Objects detected: water, sky, tree, person, bicycle, boat, building. Relationships: sky over tree; tree beside water; sky over building; boat parked on water; person riding bicycle; water beside tree.",
+    "Frame 112 (at 4.48s): Objects detected: water, sky, tree, person, bicycle, building. Relationships: sky over tree; tree beside water; sky over building; person riding bicycle; water beside tree; tree beside building.",
+    "Frame 113 (at 4.52s): Objects detected: water, sky, tree, building. Relationships: sky over tree; tree beside water; sky over building; tree beside building; building beside water; water beside tree.",
+    "Frame 114 (at 4.56s): Objects detected: water, sky, tree, building. Relationships: sky over tree; tree beside water; sky over building; tree beside building; building beside water; water beside tree.",
+    "Frame 115 (at 4.60s): Objects detected: water, sky, tree, bicycle, building, person. Relationships: sky over tree; tree beside water; sky over building; tree beside building; building beside water; person riding bicycle; water beside tree.",
+    "Frame 116 (at 4.64s): Objects detected: water, sky, tree, building, boat. Relationships: sky over tree; tree beside water; sky over building; tree beside building; building beside water; boat parked on water.",
+    "Frame 117 (at 4.68s): Objects detected: water, sky, tree, building. Relationships: sky over tree; tree beside water; sky over building; tree beside building; building beside water.",
+    "Frame 118 (at 4.72s): Objects detected: water, sky, tree, bicycle, building, building. Relationships: sky over tree; tree beside water; sky over building; tree beside building; building beside water; bicycle on water; sky over building.",
+    "Frame 119 (at 4.76s): Objects detected: water, sky, tree, building. Relationships: sky over tree; tree beside water; sky over building; tree beside building; building beside water.",
+    "Frame 120 (at 4.80s): Objects detected: water, sky, tree, bicycle, person, building. Relationships: sky over tree; tree beside water; sky over building; person riding bicycle; building beside water; tree beside building; water beside tree.",
+    "Frame 121 (at 4.84s): Objects detected: water, sky, tree, bicycle, person, person, bicycle, building. Relationships: sky over tree; tree beside water; sky over building; person riding bicycle; building beside water; tree beside building; person riding bicycle; water beside tree.",
+    "Frame 122 (at 4.88s): Objects detected: water, sky, tree, bicycle, person, building. Relationships: sky over tree; tree beside water; sky over building; person riding bicycle; tree beside building; building beside water; water beside tree.",
+    "Frame 123 (at 4.92s): Objects detected: water, sky, tree, person, bicycle, building. Relationships: sky over tree; tree beside water; sky over building; person riding bicycle; tree beside building; building beside water; water beside tree.",
+    "Frame 124 (at 4.96s): Objects detected: water, sky, bicycle, tree, person, person, bicycle, person, building. Relationships: sky over tree; tree beside water; person riding bicycle; sky over building; person riding bicycle; tree beside building; building beside water; person riding bicycle; water beside tree.",
+    "Frame 125 (at 5.00s): Objects detected: water, sky, tree, bicycle, person, bicycle, person, person, building. Relationships: sky over tree; tree beside water; sky over building; person riding bicycle; person riding bicycle; person riding bicycle; tree beside building; building beside water; water beside tree; person standing on water.",
+    "Frame 126 (at 5.04s): Objects detected: water, sky, tree, bicycle, person, person, bicycle, person, building. Relationships: sky over tree; tree beside water; person riding bicycle; sky over building; person riding bicycle; person riding bicycle; tree beside building; building beside water; water beside tree; person standing on water.",
+    "Frame 127 (at 5.08s): Objects detected: water, sky, tree, person, bicycle, person, building. Relationships: sky over tree; tree beside water; person riding bicycle; sky over building; person riding bicycle; tree beside building; water beside tree; building beside water.",
+    "Frame 128 (at 5.12s): Objects detected: water, sky, tree, bicycle, person, person, building. Relationships: sky over tree; tree beside water; person riding bicycle; person riding bicycle; sky over building; water beside tree.",
+    "Frame 129 (at 5.16s): Objects detected: water, sky, tree, person, bicycle, bicycle, person, person, building. Relationships: sky over tree; tree beside water; sky over building; person riding bicycle; person riding bicycle; tree beside building; building beside water; person riding bicycle; water beside tree.",
+    "Frame 130 (at 5.20s): Objects detected: water, sky, tree, bicycle, person, person, building. Relationships: sky over tree; tree beside water; person riding bicycle; sky over building; person riding bicycle; tree beside building; building beside water; water beside tree.",
+    "Frame 131 (at 5.24s): Objects detected: water, sky, tree, bicycle, person, person, building, boat. Relationships: sky over tree; tree beside water; person riding bicycle; sky over building; person riding bicycle; tree beside building; building beside water; boat parked on water; water beside tree.",
+    "Frame 132 (at 5.28s): Objects detected: water, sky, tree, bicycle, person, person, boat, building, building. Relationships: sky over tree; tree beside water; person riding bicycle; sky over building; person riding bicycle; tree beside building; boat parked on water; building beside water; water beside tree; sky over building.",
+    "Frame 133 (at 5.32s): Objects detected: water, sky, tree, building, boat, building. Relationships: sky over tree; tree beside water; sky over building; tree beside building; building beside water; water beside tree; boat parked on water; sky over building.",
+    "Frame 134 (at 5.36s): Objects detected: water, sky, tree, horse, boat, building, building. Relationships: sky over tree; tree beside water; sky over building; boat parked on water; horse drinking water; tree beside building; water beside tree; building beside water; sky over building.",
+    "Frame 135 (at 5.40s): Objects detected: water, sky, tree, boat, building, building. Relationships: sky over tree; tree beside water; sky over building; tree beside building; boat parked on water; building beside water; water beside tree; sky over building.",
+    "Frame 136 (at 5.44s): Objects detected: water, sky, tree, bicycle, boat, building, person, building. Relationships: sky over tree; tree beside water; sky over building; boat parked on water; tree beside building; building beside water; person riding bicycle; sky over building; water beside tree.",
+    "Frame 137 (at 5.48s): Objects detected: water, sky, tree, building, boat, building. Relationships: sky over tree; tree beside water; sky over building; tree beside building; building beside water; boat parked on water; water beside tree; sky over building.",
+    "Frame 138 (at 5.52s): Objects detected: water, sky, tree, boat, building, building. Relationships: sky over tree; tree beside water; sky over building; tree beside building; boat parked on water; building beside water; water beside tree; sky over building.",
+    "Frame 139 (at 5.56s): Objects detected: water, sky, tree, boat, building, building. Relationships: sky over tree; tree beside water; sky over building; boat parked on water; tree beside building; building beside water; water beside tree; sky over building.",
+    "Frame 140 (at 5.60s): Objects detected: water, sky, tree, boat, building. Relationships: sky over tree; tree beside water; sky over building; boat parked on water; tree beside building; building beside water; water beside tree.",
+    "Frame 141 (at 5.64s): Objects detected: sky, water, tree, boat, building. Relationships: sky over tree; tree beside water; sky over building; boat parked on water; tree beside building.",
+    "Frame 142 (at 5.68s): Objects detected: water, sky, tree, boat, building, building. Relationships: sky over tree; tree beside water; sky over building; boat parked on water; tree beside building; sky over building; water beside tree.",
+    "Frame 143 (at 5.72s): Objects detected: water, sky, tree, boat, building, building. Relationships: sky over tree; tree beside water; boat parked on water; sky over building; sky over building; tree beside building; water beside tree.",
+    "Frame 144 (at 5.76s): Objects detected: water, sky, tree, boat, building, building. Relationships: sky over tree; tree beside water; boat parked on water; sky over building; sky over building; tree beside building; water beside tree; building beside water.",
+    "Frame 145 (at 5.80s): Objects detected: water, sky, tree, bicycle, boat, person, building, building. Relationships: sky over tree; tree beside water; boat parked on water; sky over building; person riding bicycle; sky over building; tree beside building; water beside tree.",
+    "Frame 146 (at 5.84s): Objects detected: water, sky, tree, bicycle, boat, person, building, building. Relationships: sky over tree; tree beside water; boat parked on water; sky over building; person riding bicycle; water beside tree; tree beside building; sky over building.",
+    "Frame 147 (at 5.88s): Objects detected: water, sky, tree, bicycle, boat, person, building. Relationships: sky over tree; tree beside water; boat parked on water; sky over building; person riding bicycle; bicycle on water; water beside tree; tree beside building.",
+    "Frame 148 (at 5.92s): Objects detected: water, sky, tree, bicycle, boat, person, building. Relationships: sky over tree; tree beside water; boat parked on water; sky over building; person riding bicycle; bicycle on water; tree beside building; water beside tree.",
+    "Frame 149 (at 5.96s): Objects detected: water, sky, tree, bicycle, boat, bird, person, building. Relationships: sky over tree; tree beside water; sky over building; boat parked on water; tree beside building; person riding bicycle; bicycle on water; water beside tree; bird in water.",
+    "Frame 150 (at 6.00s): Objects detected: water, sky, tree, bicycle, boat, bird, building. Relationships: sky over tree; tree beside water; boat parked on water; sky over building; tree beside building; bicycle on water; bird in water; water beside tree.",
+    "Frame 151 (at 6.04s): Objects detected: water, sky, tree, bicycle, boat, person, building. Relationships: sky over tree; tree beside water; boat parked on water; sky over building; person riding bicycle; tree beside building; bicycle on water; water beside tree.",
+    "Frame 152 (at 6.08s): Objects detected: water, sky, tree, bicycle, boat, building. Relationships: sky over tree; tree beside water; boat parked on water; sky over building; tree beside building; bicycle on water; building beside water; water beside tree.",
+    "Frame 153 (at 6.12s): Objects detected: water, sky, tree, bicycle, boat, building. Relationships: sky over tree; tree beside water; boat parked on water; sky over building; tree beside building; bicycle on water.",
+    "Frame 154 (at 6.16s): Objects detected: water, sky, tree, bicycle, boat, person, building. Relationships: sky over tree; tree beside water; boat parked on water; sky over building; person riding bicycle; bicycle on water; water beside tree; tree beside building.",
+    "Frame 155 (at 6.20s): Objects detected: water, sky, tree, bicycle, boat, person, building. Relationships: sky over tree; tree beside water; boat parked on water; sky over building; person riding bicycle; bicycle on water; water beside tree.",
+    "Frame 156 (at 6.24s): Objects detected: water, sky, tree, bicycle, boat, person, building. Relationships: sky over tree; tree beside water; boat parked on water; person riding bicycle; sky over building; bicycle on water; water beside tree.",
+    "Frame 157 (at 6.28s): Objects detected: water, sky, bicycle, tree, boat, person, building. Relationships: sky over tree; tree beside water; boat parked on water; sky over building; person riding bicycle; bicycle on water; water beside tree.",
+    "Frame 158 (at 6.32s): Objects detected: water, sky, bicycle, tree, boat, person, building. Relationships: sky over tree; tree beside water; person riding bicycle; boat parked on water; sky over building; bicycle on water; water beside tree.",
+    "Frame 159 (at 6.36s): Objects detected: water, sky, bicycle, tree, boat, person, building. Relationships: sky over tree; tree beside water; person riding bicycle; sky over building; boat parked on water; bicycle on water; water beside tree.",
+    "Frame 160 (at 6.40s): Objects detected: water, sky, bicycle, tree, boat, person, building. Relationships: sky over tree; tree beside water; person riding bicycle; sky over building; boat parked on water; bicycle on water; water beside tree.",
+    "Frame 161 (at 6.44s): Objects detected: water, sky, bicycle, tree, boat, person, building. Relationships: sky over tree; tree beside water; person riding bicycle; sky over building; boat parked on water; water beside tree.",
+    "Frame 162 (at 6.48s): Objects detected: water, sky, bicycle, tree, boat, person, building. Relationships: sky over tree; tree beside water; person riding bicycle; sky over building; boat parked on water; tree beside building; water beside tree.",
+    "Frame 163 (at 6.52s): Objects detected: water, sky, bicycle, tree, person, boat, building. Relationships: sky over tree; tree beside water; person riding bicycle; sky over building; boat parked on water; tree beside building.",
+    "Frame 164 (at 6.56s): Objects detected: water, sky, bicycle, tree, person, boat, building. Relationships: sky over tree; tree beside water; person riding bicycle; sky over building; boat parked on water; tree beside building.",
+    "Frame 165 (at 6.60s): Objects detected: water, sky, bicycle, tree, boat, building, person. Relationships: sky over tree; tree beside water; sky over building; boat parked on water; person riding bicycle; tree beside building.",
+    "Frame 166 (at 6.64s): Objects detected: water, sky, tree, boat, building. Relationships: sky over tree; tree beside water; sky over building; boat parked on water; tree beside building.",
+    "Frame 167 (at 6.68s): Objects detected: water, sky, tree, boat, building. Relationships: sky over tree; tree beside water; sky over building; boat parked on water; tree beside building.",
+    "Frame 168 (at 6.72s): Objects detected: water, sky, tree, boat, building. Relationships: sky over tree; tree beside water; sky over building; boat parked on water; tree beside building.",
+    "Frame 169 (at 6.76s): Objects detected: water, sky, bicycle, tree, boat, building, person. Relationships: sky over tree; tree beside water; sky over building; boat parked on water; person riding bicycle.",
+    "Frame 170 (at 6.80s): Objects detected: water, sky, tree, boat, building. Relationships: sky over tree; tree beside water; sky over building; boat parked on water.",
+    "Frame 171 (at 6.84s): Objects detected: water, sky, tree, boat, building. Relationships: sky over tree; tree beside water; sky over building; boat parked on water; tree beside building.",
+    "Frame 172 (at 6.88s): Objects detected: water, sky, tree, boat, building. Relationships: sky over tree; tree beside water; sky over building; boat parked on water; tree beside building.",
+    "Frame 173 (at 6.92s): Objects detected: water, sky, tree, boat, building. Relationships: sky over tree; tree beside water; sky over building; boat parked on water; tree beside building.",
+    "Frame 174 (at 6.96s): Objects detected: sky, water, tree, boat, building. Relationships: sky over tree; tree beside water; sky over building; boat parked on water; tree beside building.",
+    "Frame 175 (at 7.00s): Objects detected: sky, water, tree, boat, building. Relationships: sky over tree; tree beside water; sky over building; boat parked on water; tree beside building.",
+    "Frame 176 (at 7.04s): Objects detected: water, sky, tree, boat, building. Relationships: sky over tree; tree beside water; sky over building; boat parked on water; tree beside building.",
+    "Frame 177 (at 7.08s): Objects detected: sky, water, tree, boat, building. Relationships: sky over tree; tree beside water; sky over building; boat parked on water; tree beside building.",
+    "Frame 178 (at 7.12s): Objects detected: water, sky, tree, boat, building. Relationships: sky over tree; tree beside water; boat parked on water; sky over building; tree beside building; building beside water.",
+    "Frame 179 (at 7.16s): Objects detected: sky, water, tree, boat, building. Relationships: sky over tree; tree beside water; boat parked on water; sky over building; tree beside building; building beside water.",
+    "Frame 180 (at 7.20s): Objects detected: water, sky, boat, tree, building. Relationships: sky over tree; tree beside water; boat parked on water; sky over building; tree beside building; building beside water.",
+    "Frame 181 (at 7.24s): Objects detected: water, sky, boat, tree, building, airplane. Relationships: sky over tree; tree beside water; boat parked on water; sky over building; tree beside building; boat beside airplane; building beside water.",
+    "Frame 182 (at 7.28s): Objects detected: water, sky, tree, boat, building. Relationships: sky over tree; tree beside water; boat parked on water; sky over building; tree beside building; building beside water.",
+    "Frame 183 (at 7.32s): Objects detected: water, sky, boat, tree, building. Relationships: sky over tree; tree beside water; boat parked on water; sky over building; tree beside building; building beside water.",
+    "Frame 184 (at 7.36s): Objects detected: sky, boat, tree, person, road, person, water, bicycle, building, truck, airplane. Relationships: sky over tree; tree beside road; sky over building; person walking on road; boat parked on road; tree beside water; tree beside building; boat parked on water; bicycle driving on road; sky over truck; person walking on road; airplane parked on road; building beside road; building beside tree; truck driving on road.",
+    "Frame 185 (at 7.40s): Objects detected: sky, tree, boat, person, road, bicycle, water, building, truck, pavement. Relationships: sky over tree; sky over building; tree beside road; person walking on road; boat parked on road; tree beside water; tree beside building; bicycle driving on road; boat parked on water; sky over truck; person walking on pavement; building beside road; building beside tree.",
+    "Frame 186 (at 7.44s): Objects detected: sky, tree, boat, person, road, bicycle, water, building, truck. Relationships: sky over tree; tree beside road; sky over building; person walking on road; tree beside water; boat parked on road; bicycle driving on road; tree beside building; boat parked on water; sky over truck; building beside road; building beside tree.",
+    "Frame 187 (at 7.48s): Objects detected: sky, tree, boat, person, road, water, bicycle, building, truck. Relationships: sky over tree; sky over building; tree beside road; tree beside water; person walking on road; boat parked on road; tree beside building; bicycle driving on road; boat parked on water; building beside road; building beside tree; sky over truck.",
+    "Frame 188 (at 7.52s): Objects detected: sky, tree, person, road, boat, bicycle, water, building, bicycle, truck. Relationships: sky over tree; tree beside road; sky over building; person walking on road; bicycle driving on road; tree beside building; tree beside water; boat parked on road; building beside road; building beside tree; sky over truck; bicycle driving on road; road beside tree.",
+    "Frame 189 (at 7.56s): Objects detected: sky, tree, road, person, bird, bicycle, boat, building, bicycle. Relationships: sky over tree; tree beside road; sky over building; person walking on road; bicycle driving on road; tree beside building; boat parked on road; building beside road; building beside tree; bicycle driving on road; road beside tree; bird standing on road.",
+    "Frame 190 (at 7.60s): Objects detected: sky, tree, road, person, bird, bicycle, boat, building, bicycle, truck. Relationships: sky over tree; tree beside road; person walking on road; sky over building; bicycle driving on road; tree beside building; building beside road; boat parked on road; bicycle driving on road; road beside tree; building beside tree; sky over truck; bird standing on road; truck driving on road.",
+    "Frame 191 (at 7.64s): Objects detected: sky, tree, road, person, bird, bicycle, boat, building, bicycle, truck. Relationships: sky over tree; tree beside road; sky over building; person walking on road; bicycle driving on road; tree beside building; building beside road; boat parked on road; sky over truck; building beside tree; bicycle driving on road; road beside tree; truck driving on road; bird standing on road.",
+    "Frame 192 (at 7.68s): Objects detected: sky, tree, person, road, bicycle, bird, water, boat, bicycle, building, truck, person. Relationships: sky over tree; tree beside road; sky over building; bicycle driving on road; person walking on road; tree beside building; tree beside water; sky over truck; building beside road; bicycle driving on road; boat parked on road; building beside tree; truck driving on road; road beside tree; bird standing on road; person riding bicycle.",
+    "Frame 193 (at 7.72s): Objects detected: sky, tree, bicycle, road, person, person, building, truck, bicycle, boat, person. Relationships: sky over tree; tree beside road; bicycle driving on road; sky over building; person walking on road; tree beside building; sky over truck; person riding bicycle; building beside road; truck driving on road; bicycle driving on road; person walking on road; boat parked on road; road beside tree; building beside tree.",
+    "Frame 194 (at 7.76s): Objects detected: sky, tree, road, person, bicycle, building, bicycle, truck. Relationships: sky over tree; tree beside road; sky over building; bicycle driving on road; person walking on road; tree beside building; building beside road; sky over truck; truck driving on road; building beside tree; bicycle driving on road; road beside tree.",
+    "Frame 195 (at 7.80s): Objects detected: sky, tree, road, person, person, building, horse, bicycle, truck, bicycle. Relationships: sky over tree; tree beside road; sky over building; person walking on road; horse walking on road; tree beside building; bicycle driving on road; building beside road; sky over truck; truck driving on road; person walking on road; bicycle driving on road; road beside tree; building beside tree.",
+    "Frame 196 (at 7.84s): Objects detected: sky, tree, road, bicycle, person, bicycle, building, person, boat, truck, building. Relationships: sky over tree; tree beside road; bicycle driving on road; sky over building; person walking on road; tree beside building; person riding bicycle; sky over truck; person walking on road; building beside road; bicycle driving on road; truck driving on road; road beside tree; boat parked on road; building beside tree; sky over building.",
+    "Frame 197 (at 7.88s): Objects detected: sky, tree, road, person, bicycle, bicycle, person, building, boat, truck. Relationships: sky over tree; tree beside road; sky over building; person walking on road; bicycle driving on road; tree beside building; person walking on road; building beside road; bicycle driving on road; sky over truck; road beside tree; truck driving on road; building beside tree; boat parked on road.",
+    "Frame 198 (at 7.92s): Objects detected: sky, tree, person, road, person, boat, water, bicycle, bicycle, building, truck. Relationships: sky over tree; tree beside road; sky over building; person walking on road; tree beside water; person walking on road; tree beside building; sky over truck; bicycle driving on road; building beside road; boat parked on road; bicycle driving on road; truck driving on road; building beside tree.",
+    "Frame 199 (at 7.96s): Objects detected: sky, tree, road, bicycle, person, bicycle, building, truck, water, building. Relationships: sky over tree; tree beside road; sky over building; bicycle driving on road; person walking on road; tree beside building; bicycle driving on road; building beside road; sky over truck; tree beside water; road beside tree; building beside tree; sky over building; truck driving on road.",
+    "Frame 200 (at 8.00s): Objects detected: sky, tree, person, road, bicycle, person, bicycle, boat, building, truck, building. Relationships: sky over tree; tree beside road; sky over building; bicycle driving on road; person walking on road; person walking on road; tree beside building; bicycle driving on road; building beside road; building beside tree; person sitting on boat; sky over building; sky over truck; boat parked on road.",
+    "Frame 201 (at 8.04s): Objects detected: sky, tree, person, bicycle, surfboard, road, person, bicycle, building, truck, building. Relationships: sky over tree; person holding surfboard; sky over building; tree beside road; person walking on road; surfboard on road; bicycle driving on road; tree beside building; surfboard beside person; person walking on road; sky over truck; bicycle driving on road; sky over building; building beside tree; building beside road.",
+    "Frame 202 (at 8.08s): Objects detected: sky, tree, person, bicycle, person, boat, road, bicycle, building, truck, building. Relationships: sky over tree; sky over building; tree beside road; bicycle driving on road; person walking on road; person sitting on boat; tree beside building; person walking on road; boat parked on road; sky over truck; building beside tree; bicycle driving on road; building beside road; sky over building.",
+    "Frame 203 (at 8.12s): Objects detected: sky, person, tree, bicycle, boat, person, water, building. Relationships: sky over tree; person riding bicycle; sky over building; tree beside water; tree beside building; person sitting on boat; building beside tree; person beside water.",
+    "Frame 204 (at 8.16s): Objects detected: sky, tree, bicycle, person, boat, water, person, building. Relationships: sky over tree; person riding bicycle; sky over building; tree beside water; person sitting on boat; tree beside building; boat parked on water; person beside water; building beside tree; building beside water.",
+    "Frame 205 (at 8.20s): Objects detected: sky, tree, bicycle, water, boat, person, person, building. Relationships: sky over tree; tree beside water; sky over building; person riding bicycle; boat parked on water; tree beside building; person sitting on boat; building beside water; bicycle on water; person beside water; building beside tree.",
+    "Frame 206 (at 8.24s): Objects detected: sky, tree, person, boat, water, building. Relationships: sky over tree; tree beside water; sky over building; person sitting on boat; boat parked on water; tree beside building; person beside water; building beside tree; building beside water.",
+    "Frame 207 (at 8.28s): Objects detected: sky, tree, boat, person, water, building. Relationships: sky over tree; sky over building; tree beside water; boat parked on water; person sitting on boat; tree beside building; building beside tree; person beside water; building beside water.",
+    "Frame 208 (at 8.32s): Objects detected: sky, tree, person, water, boat, building. Relationships: sky over tree; sky over building; tree beside water; person sitting on boat; tree beside building; boat parked on water; person beside water; building beside tree.",
+    "Frame 209 (at 8.36s): Objects detected: sky, tree, bicycle, person, water, boat, building, person. Relationships: sky over tree; tree beside water; sky over building; person sitting on boat; person riding bicycle; tree beside building; boat parked on water; person beside water; building beside water; building beside tree.",
+    "Frame 210 (at 8.40s): Objects detected: sky, tree, water, building. Relationships: sky over tree; tree beside water; sky over building; tree beside building; building beside tree; building beside water.",
+    "Frame 211 (at 8.44s): Objects detected: sky, tree, bicycle, water, building. Relationships: sky over tree; tree beside water; sky over building; tree beside building; building beside water; building beside tree; bicycle on water.",
+    "Frame 212 (at 8.48s): Objects detected: sky, tree, water, bicycle, building, person. Relationships: sky over tree; tree beside water; sky over building; tree beside building; building beside water; person riding bicycle; building beside tree.",
+    "Frame 213 (at 8.52s): Objects detected: sky, tree, water, boat, building. Relationships: sky over tree; tree beside water; sky over building; tree beside building; boat on water.",
+    "Frame 214 (at 8.56s): Objects detected: sky, tree, water, building, truck, surfboard. Relationships: sky over tree; tree beside water; sky over building; tree beside building; sky over truck; surfboard on water; building beside water.",
+    "Frame 215 (at 8.60s): Objects detected: sky, tree, person, bicycle, person, water, surfboard, road, building, building. Relationships: sky over tree; person holding surfboard; tree beside water; sky over building; tree beside road; surfboard on water; person walking on road; bicycle driving on road; person walking on road; surfboard on road; tree beside building; person beside water; sky over building.",
+    "Frame 216 (at 8.64s): Objects detected: sky, tree, surfboard, person, bicycle, person, water, building, road, truck. Relationships: sky over tree; person holding surfboard; surfboard on water; sky over building; tree beside water; tree beside road; surfboard on road; tree beside building; person walking on road; bicycle driving on road; surfboard beside person; water enclosing surfboard; person walking on road; person beside water; sky over truck.",
+    "Frame 217 (at 8.68s): Objects detected: sky, tree, water, bicycle, person, road, boat, surfboard, person, building, truck. Relationships: sky over tree; tree beside water; tree beside road; surfboard on water; sky over building; bicycle driving on road; person riding bicycle; person walking on road; tree beside building; boat parked on water; sky over truck; surfboard on road; water enclosing surfboard.",
+    "Frame 218 (at 8.72s): Objects detected: sky, tree, person, person, water, surfboard, boat, sand, building. Relationships: sky over tree; tree beside water; sky over building; surfboard on water; person standing on sand; tree beside building; person beside water; surfboard on sand; boat parked on water; person standing on sand.",
+    "Frame 219 (at 8.76s): Objects detected: sky, tree, person, water, boat, building, truck. Relationships: sky over tree; tree beside water; sky over building; person beside water; boat parked on water; tree beside building; building beside water; sky over truck.",
+    "Frame 220 (at 8.80s): Objects detected: water, sky, tree, bird, boat, building, truck. Relationships: sky over tree; tree beside water; sky over building; bird standing on water; tree beside building; boat parked on water; building beside water; sky over truck; water beside tree.",
+    "Frame 221 (at 8.84s): Objects detected: water, sky, tree, person, bird, person, person, road, bicycle, building, boat. Relationships: sky over tree; tree beside water; tree beside road; sky over building; person walking on road; person beside water; bird on water; person walking on road; bird standing on road; tree beside building; building beside water; person walking on road; water beside tree; boat parked on water; bicycle driving on road; water beside road.",
+    "Frame 222 (at 8.88s): Objects detected: water, sky, tree, person, horse, person, road, bird, building, truck. Relationships: sky over tree; tree beside water; tree beside road; horse walking on road; sky over building; person walking on road; horse drinking water; person walking on road; tree beside building; bird on water; bird standing on road; water beside road; building beside water; water beside tree; sky over truck.",
+    "Frame 223 (at 8.92s): Objects detected: water, sky, tree, bird, person, person, road, horse, building, truck. Relationships: sky over tree; tree beside water; tree beside road; bird standing on road; person walking on road; sky over building; bird on water; person walking on road; horse walking on road; tree beside building; water beside road; building beside water; horse drinking water; water beside tree; sky over truck.",
+    "Frame 224 (at 8.96s): Objects detected: water, sky, tree, bird, person, person, road, building, airplane. Relationships: sky over tree; tree beside water; tree beside road; sky over building; person walking on road; bird standing on road; bird standing on water; tree beside building; person walking on road; building beside water; bird standing on airplane; water beside tree; person beside water; water beside road.",
+    "Frame 225 (at 9.00s): Objects detected: water, sky, tree, bird, person, person, person, road, person, bicycle, horse, building, truck. Relationships: sky over tree; tree beside water; tree beside road; sky over building; person riding bicycle; person walking on road; bird standing on road; person walking on road; person walking on road; person beside water; bird standing on water; tree beside building; bicycle driving on road; building beside water; horse walking on road; person walking on road; person in water; water beside road; water beside tree; person beside water; sky over truck.",
+    "Frame 226 (at 9.04s): Objects detected: water, sky, tree, person, person, person, person, road, bicycle, horse, bird, building, truck. Relationships: sky over tree; tree beside water; person riding bicycle; tree beside road; sky over building; person walking on road; bicycle driving on road; person walking on road; horse walking on road; person walking on road; person beside water; person walking on road; tree beside building; bird standing on road; water beside road; building beside water; person in water; bird on water; building beside road; water beside tree; person beside water; sky over truck.",
+    "Frame 227 (at 9.08s): Objects detected: sky, water, tree, person, person, road, person, bird, bicycle, bicycle, boat, building, airplane, truck. Relationships: sky over tree; tree beside water; tree beside road; sky over building; person walking on road; person walking on road; person beside water; person walking on road; bicycle driving on road; tree beside building; bird standing on road; boat parked on water; building beside water; water beside road; bicycle driving on road; sky over truck; building beside road; bird on water; person beside water; water beside tree; airplane parked on road.",
+    "Frame 228 (at 9.12s): Objects detected: sky, water, tree, person, person, road, bicycle, bird, building, boat. Relationships: sky over tree; tree beside water; tree beside road; sky over building; person walking on road; person walking on road; person beside water; bicycle driving on road; tree beside building; building beside water; water beside road; bird standing on road; boat parked on water; person beside water; building beside road; water beside tree.",
+    "Frame 229 (at 9.16s): Objects detected: sky, water, tree, person, horse, road, bird, building, boat, horse. Relationships: sky over tree; tree beside water; tree beside road; sky over building; person walking on road; horse walking on road; bird standing on road; tree beside building; building beside water; horse walking on road; water beside road; boat parked on water; bird standing on water; person beside water; building beside road; water beside tree.",
+    "Frame 230 (at 9.20s): Objects detected: sky, tree, water, person, road, person, bicycle, boat, bird, building, truck. Relationships: sky over tree; tree beside road; tree beside water; person walking on road; sky over building; bicycle driving on road; tree beside building; person walking on road; building beside road; water beside road; bird standing on road; boat parked on water; sky over truck; road beside tree; building beside water.",
+    "Frame 231 (at 9.24s): Objects detected: sky, tree, person, water, road, person, person, bicycle, bird, person, building, person. Relationships: sky over tree; tree beside water; tree beside road; person walking on road; sky over building; bicycle driving on road; tree beside building; person beside water; person walking on road; person walking on road; person walking on road; building beside road; bird standing on road; person beside person; water beside road; building beside water; person walking on road.",
+    "Frame 232 (at 9.28s): Objects detected: sky, water, tree, person, road, person, person, person, bicycle, boat, building. Relationships: sky over tree; tree beside water; tree beside road; person walking on road; sky over building; person walking on road; person walking on road; person beside water; bicycle driving on road; tree beside building; person beside water; water beside road; person walking on road; building beside road; building beside water; boat parked on water; road beside tree; boat parked on road.",
+    "Frame 233 (at 9.32s): Objects detected: sky, water, tree, person, road, person, person, bicycle, bird, boat, building, truck. Relationships: sky over tree; tree beside water; tree beside road; person walking on road; sky over building; bicycle driving on road; person walking on road; person walking on road; person beside water; person beside water; tree beside building; bicycle on water; water beside road; bird standing on road; building beside water; building beside road; boat parked on water; sky over truck; road beside tree.",
+    "Frame 234 (at 9.36s): Objects detected: sky, tree, water, person, person, bicycle, road, person, building, truck, person. Relationships: sky over tree; tree beside water; tree beside road; sky over building; person walking on road; bicycle driving on road; person walking on road; tree beside building; person beside water; bicycle on water; sky over truck; building beside water; water beside road; building beside road; person riding bicycle; person walking on road.",
+    "Frame 235 (at 9.40s): Objects detected: water, sky, tree, bicycle, person, bird, road, person, building, boat, person. Relationships: sky over tree; tree beside water; tree beside road; sky over building; bicycle driving on road; person riding bicycle; person walking on road; person riding bicycle; bird standing on road; tree beside building; person walking on road; bicycle on water; person beside water; building beside water; bird on water; boat parked on water; water beside road; building beside road; person walking on road; water beside tree; building beside tree.",
+    "Frame 236 (at 9.44s): Objects detected: sky, water, tree, road, person, person, bird, building, boat, motorcycle, bicycle. Relationships: sky over tree; tree beside water; tree beside road; sky over building; person walking on road; person walking on road; tree beside building; bird standing on road; building beside water; water beside road; person beside water; building beside road; boat parked on water; bicycle driving on road; motorcycle driving on road; building beside tree; water beside tree.",
+    "Frame 237 (at 9.48s): Objects detected: sky, water, tree, person, person, road, person, building, boat, bicycle, motorcycle. Relationships: sky over tree; tree beside water; tree beside road; sky over building; person walking on road; person beside water; person walking on road; person beside water; tree beside building; building beside water; bicycle driving on road; person walking on road; water beside road; boat parked on water; motorcycle driving on road; building beside road.",
+    "Frame 238 (at 9.52s): Objects detected: sky, person, tree, water, person, road, person, bicycle, person, building. Relationships: sky over tree; tree beside water; tree beside road; person walking on road; person walking on road; sky over building; person beside water; bicycle driving on road; person beside water; tree beside building; person walking on road; person riding bicycle; person walking on road; building beside road; water beside road; building beside water; road beside tree; building beside tree.",
+    "Frame 239 (at 9.56s): Objects detected: sky, person, tree, water, person, road, person, person, building, boat, bicycle. Relationships: sky over tree; tree beside water; tree beside road; person walking on road; person walking on road; sky over building; person beside water; person beside water; person walking on road; tree beside building; person walking on road; water beside road; building beside road; building beside water; road beside tree; bicycle driving on road; boat parked on water.",
+    "Frame 240 (at 9.60s): Objects detected: person, sky, tree, person, water, person, road, person, motorcycle, person, building. Relationships: sky over tree; tree beside road; tree beside water; person walking on road; person walking on road; person beside water; person walking on road; sky over building; motorcycle driving on road; person walking on road; tree beside building; person beside water; water beside road; person walking on road.",
+    "Frame 241 (at 9.64s): Objects detected: person, sky, tree, water, road, person, motorcycle, person, person, truck, person, building. Relationships: sky over tree; tree beside road; tree beside water; person walking on road; person walking on road; person beside water; motorcycle driving on road; sky over building; person walking on road; sky over truck; person walking on road; truck driving on road; tree beside building; water beside road; person walking on road; road beside tree.",
+    "Frame 242 (at 9.68s): Objects detected: sky, person, tree, person, water, person, road, person, motorcycle, truck, bicycle, building. Relationships: sky over tree; tree beside road; tree beside water; person walking on road; person walking on road; person walking on road; person beside water; sky over building; person walking on road; motorcycle driving on road; sky over truck; bicycle driving on road; person standing on water; tree beside building; truck driving on road.",
+    "Frame 243 (at 9.72s): Objects detected: sky, person, person, tree, person, road, water, person, motorcycle, truck, building. Relationships: sky over tree; person walking on road; tree beside road; person walking on road; tree beside water; person walking on road; motorcycle driving on road; sky over building; person beside water; sky over truck; person walking on road; person standing on water; tree beside building; truck driving on road.",
+    "Frame 244 (at 9.76s): Objects detected: sky, person, person, motorcycle, tree, person, road, person, person, truck, water, building. Relationships: sky over tree; motorcycle driving on road; person walking on road; tree beside road; person walking on road; person walking on road; sky over building; sky over truck; tree beside water; person walking on road; person beside water; person walking on road; truck driving on road; tree beside building; person standing on water.",
+    "Frame 245 (at 9.80s): Objects detected: sky, tree, person, motorcycle, person, person, road, pavement, water, building. Relationships: sky over tree; tree beside road; motorcycle driving on road; motorcycle parked on pavement; person walking on pavement; person walking on road; person walking on road; person walking on pavement; tree beside water; sky over building; road attached to pavement; person walking on pavement; person walking on road; pavement attached to road; person beside water; tree beside pavement; tree beside building.",
+    "Frame 246 (at 9.84s): Objects detected: sky, tree, person, person, water, truck, building. Relationships: sky over tree; tree beside water; sky over building; person beside water; sky over truck; person standing on water; tree beside building.",
+    "Frame 247 (at 9.88s): Objects detected: sky, person, tree, water, truck, building. Relationships: sky over tree; tree beside water; sky over building; person standing on water; sky over truck; tree beside building.",
+    "Frame 248 (at 9.92s): Objects detected: sky, person, tree, person, water, person, motorcycle, road, building, truck, grass. Relationships: sky over tree; tree beside water; person walking on road; tree beside road; sky over building; person walking on road; motorcycle driving on road; person beside water; person standing on water; person walking on road; tree beside building; sky over truck; person standing on grass.",
+    "Frame 249 (at 9.96s): Objects detected: sky, person, tree, person, water, boat, building, truck. Relationships: sky over tree; tree beside water; sky over building; person beside water; tree beside building; person standing on water; sky over truck; boat parked on water; building beside water.",
+    "Frame 250 (at 10.00s): Objects detected: person, sky, person, tree, water, building, boat, truck. Relationships: sky over tree; tree beside water; sky over building; person beside water; person standing on water; tree beside building; sky over truck; building beside water; boat parked on water.",
+    "Frame 251 (at 10.04s): Objects detected: person, sky, person, tree, water, bicycle, road, building, truck. Relationships: sky over tree; tree beside water; sky over building; person walking on road; tree beside road; person walking on road; bicycle driving on road; person beside water; tree beside building; person standing on water; bicycle on water; sky over truck.",
+    "Frame 252 (at 10.08s): Objects detected: person, sky, person, tree, water, bicycle, road, truck, building, handbag. Relationships: sky over tree; tree beside water; sky over building; person beside water; person walking on road; bicycle driving on road; tree beside road; person walking on road; person standing on water; bicycle on water; sky over truck; tree beside building; person carrying handbag; building beside water.",
+    "Frame 253 (at 10.12s): Objects detected: person, sky, person, tree, water, bicycle, truck, building, handbag. Relationships: sky over tree; tree beside water; sky over building; person beside water; person standing on water; bicycle on water; tree beside building; sky over truck; building beside water; person carrying handbag.",
+    "Frame 254 (at 10.16s): Objects detected: water, sky, person, tree, bicycle, truck, building. Relationships: sky over tree; tree beside water; sky over building; person standing on water; bicycle on water; sky over truck; tree beside building; building beside water.",
+    "Frame 255 (at 10.20s): Objects detected: sky, person, tree, water, bicycle, person, building, truck, person. Relationships: sky over tree; tree beside water; sky over building; person standing on water; bicycle on water; tree beside building; person riding bicycle; sky over truck; building beside water; person beside water."
+  ],
+  "metadata": [
+    {
+      "frame": 1,
+      "timestamp": 0.04,
+      "chunk_index": 0
+    },
+    {
+      "frame": 2,
+      "timestamp": 0.08,
+      "chunk_index": 1
+    },
+    {
+      "frame": 3,
+      "timestamp": 0.12,
+      "chunk_index": 2
+    },
+    {
+      "frame": 4,
+      "timestamp": 0.16,
+      "chunk_index": 3
+    },
+    {
+      "frame": 5,
+      "timestamp": 0.2,
+      "chunk_index": 4
+    },
+    {
+      "frame": 6,
+      "timestamp": 0.24,
+      "chunk_index": 5
+    },
+    {
+      "frame": 7,
+      "timestamp": 0.28,
+      "chunk_index": 6
+    },
+    {
+      "frame": 8,
+      "timestamp": 0.32,
+      "chunk_index": 7
+    },
+    {
+      "frame": 9,
+      "timestamp": 0.36,
+      "chunk_index": 8
+    },
+    {
+      "frame": 10,
+      "timestamp": 0.4,
+      "chunk_index": 9
+    },
+    {
+      "frame": 11,
+      "timestamp": 0.44,
+      "chunk_index": 10
+    },
+    {
+      "frame": 12,
+      "timestamp": 0.48,
+      "chunk_index": 11
+    },
+    {
+      "frame": 13,
+      "timestamp": 0.52,
+      "chunk_index": 12
+    },
+    {
+      "frame": 14,
+      "timestamp": 0.56,
+      "chunk_index": 13
+    },
+    {
+      "frame": 15,
+      "timestamp": 0.6,
+      "chunk_index": 14
+    },
+    {
+      "frame": 16,
+      "timestamp": 0.64,
+      "chunk_index": 15
+    },
+    {
+      "frame": 17,
+      "timestamp": 0.68,
+      "chunk_index": 16
+    },
+    {
+      "frame": 18,
+      "timestamp": 0.72,
+      "chunk_index": 17
+    },
+    {
+      "frame": 19,
+      "timestamp": 0.76,
+      "chunk_index": 18
+    },
+    {
+      "frame": 20,
+      "timestamp": 0.8,
+      "chunk_index": 19
+    },
+    {
+      "frame": 21,
+      "timestamp": 0.84,
+      "chunk_index": 20
+    },
+    {
+      "frame": 22,
+      "timestamp": 0.88,
+      "chunk_index": 21
+    },
+    {
+      "frame": 23,
+      "timestamp": 0.92,
+      "chunk_index": 22
+    },
+    {
+      "frame": 24,
+      "timestamp": 0.96,
+      "chunk_index": 23
+    },
+    {
+      "frame": 25,
+      "timestamp": 1.0,
+      "chunk_index": 24
+    },
+    {
+      "frame": 26,
+      "timestamp": 1.04,
+      "chunk_index": 25
+    },
+    {
+      "frame": 27,
+      "timestamp": 1.08,
+      "chunk_index": 26
+    },
+    {
+      "frame": 28,
+      "timestamp": 1.12,
+      "chunk_index": 27
+    },
+    {
+      "frame": 29,
+      "timestamp": 1.16,
+      "chunk_index": 28
+    },
+    {
+      "frame": 30,
+      "timestamp": 1.2,
+      "chunk_index": 29
+    },
+    {
+      "frame": 31,
+      "timestamp": 1.24,
+      "chunk_index": 30
+    },
+    {
+      "frame": 32,
+      "timestamp": 1.28,
+      "chunk_index": 31
+    },
+    {
+      "frame": 33,
+      "timestamp": 1.32,
+      "chunk_index": 32
+    },
+    {
+      "frame": 34,
+      "timestamp": 1.36,
+      "chunk_index": 33
+    },
+    {
+      "frame": 35,
+      "timestamp": 1.4,
+      "chunk_index": 34
+    },
+    {
+      "frame": 36,
+      "timestamp": 1.44,
+      "chunk_index": 35
+    },
+    {
+      "frame": 37,
+      "timestamp": 1.48,
+      "chunk_index": 36
+    },
+    {
+      "frame": 38,
+      "timestamp": 1.52,
+      "chunk_index": 37
+    },
+    {
+      "frame": 39,
+      "timestamp": 1.56,
+      "chunk_index": 38
+    },
+    {
+      "frame": 40,
+      "timestamp": 1.6,
+      "chunk_index": 39
+    },
+    {
+      "frame": 41,
+      "timestamp": 1.64,
+      "chunk_index": 40
+    },
+    {
+      "frame": 42,
+      "timestamp": 1.68,
+      "chunk_index": 41
+    },
+    {
+      "frame": 43,
+      "timestamp": 1.72,
+      "chunk_index": 42
+    },
+    {
+      "frame": 44,
+      "timestamp": 1.76,
+      "chunk_index": 43
+    },
+    {
+      "frame": 45,
+      "timestamp": 1.8,
+      "chunk_index": 44
+    },
+    {
+      "frame": 46,
+      "timestamp": 1.84,
+      "chunk_index": 45
+    },
+    {
+      "frame": 47,
+      "timestamp": 1.88,
+      "chunk_index": 46
+    },
+    {
+      "frame": 48,
+      "timestamp": 1.92,
+      "chunk_index": 47
+    },
+    {
+      "frame": 49,
+      "timestamp": 1.96,
+      "chunk_index": 48
+    },
+    {
+      "frame": 50,
+      "timestamp": 2.0,
+      "chunk_index": 49
+    },
+    {
+      "frame": 51,
+      "timestamp": 2.04,
+      "chunk_index": 50
+    },
+    {
+      "frame": 52,
+      "timestamp": 2.08,
+      "chunk_index": 51
+    },
+    {
+      "frame": 53,
+      "timestamp": 2.12,
+      "chunk_index": 52
+    },
+    {
+      "frame": 54,
+      "timestamp": 2.16,
+      "chunk_index": 53
+    },
+    {
+      "frame": 55,
+      "timestamp": 2.2,
+      "chunk_index": 54
+    },
+    {
+      "frame": 56,
+      "timestamp": 2.24,
+      "chunk_index": 55
+    },
+    {
+      "frame": 57,
+      "timestamp": 2.28,
+      "chunk_index": 56
+    },
+    {
+      "frame": 58,
+      "timestamp": 2.32,
+      "chunk_index": 57
+    },
+    {
+      "frame": 59,
+      "timestamp": 2.36,
+      "chunk_index": 58
+    },
+    {
+      "frame": 60,
+      "timestamp": 2.4,
+      "chunk_index": 59
+    },
+    {
+      "frame": 61,
+      "timestamp": 2.44,
+      "chunk_index": 60
+    },
+    {
+      "frame": 62,
+      "timestamp": 2.48,
+      "chunk_index": 61
+    },
+    {
+      "frame": 63,
+      "timestamp": 2.52,
+      "chunk_index": 62
+    },
+    {
+      "frame": 64,
+      "timestamp": 2.56,
+      "chunk_index": 63
+    },
+    {
+      "frame": 65,
+      "timestamp": 2.6,
+      "chunk_index": 64
+    },
+    {
+      "frame": 66,
+      "timestamp": 2.64,
+      "chunk_index": 65
+    },
+    {
+      "frame": 67,
+      "timestamp": 2.68,
+      "chunk_index": 66
+    },
+    {
+      "frame": 68,
+      "timestamp": 2.72,
+      "chunk_index": 67
+    },
+    {
+      "frame": 69,
+      "timestamp": 2.76,
+      "chunk_index": 68
+    },
+    {
+      "frame": 70,
+      "timestamp": 2.8,
+      "chunk_index": 69
+    },
+    {
+      "frame": 71,
+      "timestamp": 2.84,
+      "chunk_index": 70
+    },
+    {
+      "frame": 72,
+      "timestamp": 2.88,
+      "chunk_index": 71
+    },
+    {
+      "frame": 73,
+      "timestamp": 2.92,
+      "chunk_index": 72
+    },
+    {
+      "frame": 74,
+      "timestamp": 2.96,
+      "chunk_index": 73
+    },
+    {
+      "frame": 75,
+      "timestamp": 3.0,
+      "chunk_index": 74
+    },
+    {
+      "frame": 76,
+      "timestamp": 3.04,
+      "chunk_index": 75
+    },
+    {
+      "frame": 77,
+      "timestamp": 3.08,
+      "chunk_index": 76
+    },
+    {
+      "frame": 78,
+      "timestamp": 3.12,
+      "chunk_index": 77
+    },
+    {
+      "frame": 79,
+      "timestamp": 3.16,
+      "chunk_index": 78
+    },
+    {
+      "frame": 80,
+      "timestamp": 3.2,
+      "chunk_index": 79
+    },
+    {
+      "frame": 81,
+      "timestamp": 3.24,
+      "chunk_index": 80
+    },
+    {
+      "frame": 82,
+      "timestamp": 3.28,
+      "chunk_index": 81
+    },
+    {
+      "frame": 83,
+      "timestamp": 3.32,
+      "chunk_index": 82
+    },
+    {
+      "frame": 84,
+      "timestamp": 3.36,
+      "chunk_index": 83
+    },
+    {
+      "frame": 85,
+      "timestamp": 3.4,
+      "chunk_index": 84
+    },
+    {
+      "frame": 86,
+      "timestamp": 3.44,
+      "chunk_index": 85
+    },
+    {
+      "frame": 87,
+      "timestamp": 3.48,
+      "chunk_index": 86
+    },
+    {
+      "frame": 88,
+      "timestamp": 3.52,
+      "chunk_index": 87
+    },
+    {
+      "frame": 89,
+      "timestamp": 3.56,
+      "chunk_index": 88
+    },
+    {
+      "frame": 90,
+      "timestamp": 3.6,
+      "chunk_index": 89
+    },
+    {
+      "frame": 91,
+      "timestamp": 3.64,
+      "chunk_index": 90
+    },
+    {
+      "frame": 92,
+      "timestamp": 3.68,
+      "chunk_index": 91
+    },
+    {
+      "frame": 93,
+      "timestamp": 3.72,
+      "chunk_index": 92
+    },
+    {
+      "frame": 94,
+      "timestamp": 3.76,
+      "chunk_index": 93
+    },
+    {
+      "frame": 95,
+      "timestamp": 3.8,
+      "chunk_index": 94
+    },
+    {
+      "frame": 96,
+      "timestamp": 3.84,
+      "chunk_index": 95
+    },
+    {
+      "frame": 97,
+      "timestamp": 3.88,
+      "chunk_index": 96
+    },
+    {
+      "frame": 98,
+      "timestamp": 3.92,
+      "chunk_index": 97
+    },
+    {
+      "frame": 99,
+      "timestamp": 3.96,
+      "chunk_index": 98
+    },
+    {
+      "frame": 100,
+      "timestamp": 4.0,
+      "chunk_index": 99
+    },
+    {
+      "frame": 101,
+      "timestamp": 4.04,
+      "chunk_index": 100
+    },
+    {
+      "frame": 102,
+      "timestamp": 4.08,
+      "chunk_index": 101
+    },
+    {
+      "frame": 103,
+      "timestamp": 4.12,
+      "chunk_index": 102
+    },
+    {
+      "frame": 104,
+      "timestamp": 4.16,
+      "chunk_index": 103
+    },
+    {
+      "frame": 105,
+      "timestamp": 4.2,
+      "chunk_index": 104
+    },
+    {
+      "frame": 106,
+      "timestamp": 4.24,
+      "chunk_index": 105
+    },
+    {
+      "frame": 107,
+      "timestamp": 4.28,
+      "chunk_index": 106
+    },
+    {
+      "frame": 108,
+      "timestamp": 4.32,
+      "chunk_index": 107
+    },
+    {
+      "frame": 109,
+      "timestamp": 4.36,
+      "chunk_index": 108
+    },
+    {
+      "frame": 110,
+      "timestamp": 4.4,
+      "chunk_index": 109
+    },
+    {
+      "frame": 111,
+      "timestamp": 4.44,
+      "chunk_index": 110
+    },
+    {
+      "frame": 112,
+      "timestamp": 4.48,
+      "chunk_index": 111
+    },
+    {
+      "frame": 113,
+      "timestamp": 4.52,
+      "chunk_index": 112
+    },
+    {
+      "frame": 114,
+      "timestamp": 4.56,
+      "chunk_index": 113
+    },
+    {
+      "frame": 115,
+      "timestamp": 4.6,
+      "chunk_index": 114
+    },
+    {
+      "frame": 116,
+      "timestamp": 4.64,
+      "chunk_index": 115
+    },
+    {
+      "frame": 117,
+      "timestamp": 4.68,
+      "chunk_index": 116
+    },
+    {
+      "frame": 118,
+      "timestamp": 4.72,
+      "chunk_index": 117
+    },
+    {
+      "frame": 119,
+      "timestamp": 4.76,
+      "chunk_index": 118
+    },
+    {
+      "frame": 120,
+      "timestamp": 4.8,
+      "chunk_index": 119
+    },
+    {
+      "frame": 121,
+      "timestamp": 4.84,
+      "chunk_index": 120
+    },
+    {
+      "frame": 122,
+      "timestamp": 4.88,
+      "chunk_index": 121
+    },
+    {
+      "frame": 123,
+      "timestamp": 4.92,
+      "chunk_index": 122
+    },
+    {
+      "frame": 124,
+      "timestamp": 4.96,
+      "chunk_index": 123
+    },
+    {
+      "frame": 125,
+      "timestamp": 5.0,
+      "chunk_index": 124
+    },
+    {
+      "frame": 126,
+      "timestamp": 5.04,
+      "chunk_index": 125
+    },
+    {
+      "frame": 127,
+      "timestamp": 5.08,
+      "chunk_index": 126
+    },
+    {
+      "frame": 128,
+      "timestamp": 5.12,
+      "chunk_index": 127
+    },
+    {
+      "frame": 129,
+      "timestamp": 5.16,
+      "chunk_index": 128
+    },
+    {
+      "frame": 130,
+      "timestamp": 5.2,
+      "chunk_index": 129
+    },
+    {
+      "frame": 131,
+      "timestamp": 5.24,
+      "chunk_index": 130
+    },
+    {
+      "frame": 132,
+      "timestamp": 5.28,
+      "chunk_index": 131
+    },
+    {
+      "frame": 133,
+      "timestamp": 5.32,
+      "chunk_index": 132
+    },
+    {
+      "frame": 134,
+      "timestamp": 5.36,
+      "chunk_index": 133
+    },
+    {
+      "frame": 135,
+      "timestamp": 5.4,
+      "chunk_index": 134
+    },
+    {
+      "frame": 136,
+      "timestamp": 5.44,
+      "chunk_index": 135
+    },
+    {
+      "frame": 137,
+      "timestamp": 5.48,
+      "chunk_index": 136
+    },
+    {
+      "frame": 138,
+      "timestamp": 5.52,
+      "chunk_index": 137
+    },
+    {
+      "frame": 139,
+      "timestamp": 5.56,
+      "chunk_index": 138
+    },
+    {
+      "frame": 140,
+      "timestamp": 5.6,
+      "chunk_index": 139
+    },
+    {
+      "frame": 141,
+      "timestamp": 5.64,
+      "chunk_index": 140
+    },
+    {
+      "frame": 142,
+      "timestamp": 5.68,
+      "chunk_index": 141
+    },
+    {
+      "frame": 143,
+      "timestamp": 5.72,
+      "chunk_index": 142
+    },
+    {
+      "frame": 144,
+      "timestamp": 5.76,
+      "chunk_index": 143
+    },
+    {
+      "frame": 145,
+      "timestamp": 5.8,
+      "chunk_index": 144
+    },
+    {
+      "frame": 146,
+      "timestamp": 5.84,
+      "chunk_index": 145
+    },
+    {
+      "frame": 147,
+      "timestamp": 5.88,
+      "chunk_index": 146
+    },
+    {
+      "frame": 148,
+      "timestamp": 5.92,
+      "chunk_index": 147
+    },
+    {
+      "frame": 149,
+      "timestamp": 5.96,
+      "chunk_index": 148
+    },
+    {
+      "frame": 150,
+      "timestamp": 6.0,
+      "chunk_index": 149
+    },
+    {
+      "frame": 151,
+      "timestamp": 6.04,
+      "chunk_index": 150
+    },
+    {
+      "frame": 152,
+      "timestamp": 6.08,
+      "chunk_index": 151
+    },
+    {
+      "frame": 153,
+      "timestamp": 6.12,
+      "chunk_index": 152
+    },
+    {
+      "frame": 154,
+      "timestamp": 6.16,
+      "chunk_index": 153
+    },
+    {
+      "frame": 155,
+      "timestamp": 6.2,
+      "chunk_index": 154
+    },
+    {
+      "frame": 156,
+      "timestamp": 6.24,
+      "chunk_index": 155
+    },
+    {
+      "frame": 157,
+      "timestamp": 6.28,
+      "chunk_index": 156
+    },
+    {
+      "frame": 158,
+      "timestamp": 6.32,
+      "chunk_index": 157
+    },
+    {
+      "frame": 159,
+      "timestamp": 6.36,
+      "chunk_index": 158
+    },
+    {
+      "frame": 160,
+      "timestamp": 6.4,
+      "chunk_index": 159
+    },
+    {
+      "frame": 161,
+      "timestamp": 6.44,
+      "chunk_index": 160
+    },
+    {
+      "frame": 162,
+      "timestamp": 6.48,
+      "chunk_index": 161
+    },
+    {
+      "frame": 163,
+      "timestamp": 6.52,
+      "chunk_index": 162
+    },
+    {
+      "frame": 164,
+      "timestamp": 6.56,
+      "chunk_index": 163
+    },
+    {
+      "frame": 165,
+      "timestamp": 6.6,
+      "chunk_index": 164
+    },
+    {
+      "frame": 166,
+      "timestamp": 6.64,
+      "chunk_index": 165
+    },
+    {
+      "frame": 167,
+      "timestamp": 6.68,
+      "chunk_index": 166
+    },
+    {
+      "frame": 168,
+      "timestamp": 6.72,
+      "chunk_index": 167
+    },
+    {
+      "frame": 169,
+      "timestamp": 6.76,
+      "chunk_index": 168
+    },
+    {
+      "frame": 170,
+      "timestamp": 6.8,
+      "chunk_index": 169
+    },
+    {
+      "frame": 171,
+      "timestamp": 6.84,
+      "chunk_index": 170
+    },
+    {
+      "frame": 172,
+      "timestamp": 6.88,
+      "chunk_index": 171
+    },
+    {
+      "frame": 173,
+      "timestamp": 6.92,
+      "chunk_index": 172
+    },
+    {
+      "frame": 174,
+      "timestamp": 6.96,
+      "chunk_index": 173
+    },
+    {
+      "frame": 175,
+      "timestamp": 7.0,
+      "chunk_index": 174
+    },
+    {
+      "frame": 176,
+      "timestamp": 7.04,
+      "chunk_index": 175
+    },
+    {
+      "frame": 177,
+      "timestamp": 7.08,
+      "chunk_index": 176
+    },
+    {
+      "frame": 178,
+      "timestamp": 7.12,
+      "chunk_index": 177
+    },
+    {
+      "frame": 179,
+      "timestamp": 7.16,
+      "chunk_index": 178
+    },
+    {
+      "frame": 180,
+      "timestamp": 7.2,
+      "chunk_index": 179
+    },
+    {
+      "frame": 181,
+      "timestamp": 7.24,
+      "chunk_index": 180
+    },
+    {
+      "frame": 182,
+      "timestamp": 7.28,
+      "chunk_index": 181
+    },
+    {
+      "frame": 183,
+      "timestamp": 7.32,
+      "chunk_index": 182
+    },
+    {
+      "frame": 184,
+      "timestamp": 7.36,
+      "chunk_index": 183
+    },
+    {
+      "frame": 185,
+      "timestamp": 7.4,
+      "chunk_index": 184
+    },
+    {
+      "frame": 186,
+      "timestamp": 7.44,
+      "chunk_index": 185
+    },
+    {
+      "frame": 187,
+      "timestamp": 7.48,
+      "chunk_index": 186
+    },
+    {
+      "frame": 188,
+      "timestamp": 7.52,
+      "chunk_index": 187
+    },
+    {
+      "frame": 189,
+      "timestamp": 7.56,
+      "chunk_index": 188
+    },
+    {
+      "frame": 190,
+      "timestamp": 7.6,
+      "chunk_index": 189
+    },
+    {
+      "frame": 191,
+      "timestamp": 7.64,
+      "chunk_index": 190
+    },
+    {
+      "frame": 192,
+      "timestamp": 7.68,
+      "chunk_index": 191
+    },
+    {
+      "frame": 193,
+      "timestamp": 7.72,
+      "chunk_index": 192
+    },
+    {
+      "frame": 194,
+      "timestamp": 7.76,
+      "chunk_index": 193
+    },
+    {
+      "frame": 195,
+      "timestamp": 7.8,
+      "chunk_index": 194
+    },
+    {
+      "frame": 196,
+      "timestamp": 7.84,
+      "chunk_index": 195
+    },
+    {
+      "frame": 197,
+      "timestamp": 7.88,
+      "chunk_index": 196
+    },
+    {
+      "frame": 198,
+      "timestamp": 7.92,
+      "chunk_index": 197
+    },
+    {
+      "frame": 199,
+      "timestamp": 7.96,
+      "chunk_index": 198
+    },
+    {
+      "frame": 200,
+      "timestamp": 8.0,
+      "chunk_index": 199
+    },
+    {
+      "frame": 201,
+      "timestamp": 8.04,
+      "chunk_index": 200
+    },
+    {
+      "frame": 202,
+      "timestamp": 8.08,
+      "chunk_index": 201
+    },
+    {
+      "frame": 203,
+      "timestamp": 8.12,
+      "chunk_index": 202
+    },
+    {
+      "frame": 204,
+      "timestamp": 8.16,
+      "chunk_index": 203
+    },
+    {
+      "frame": 205,
+      "timestamp": 8.2,
+      "chunk_index": 204
+    },
+    {
+      "frame": 206,
+      "timestamp": 8.24,
+      "chunk_index": 205
+    },
+    {
+      "frame": 207,
+      "timestamp": 8.28,
+      "chunk_index": 206
+    },
+    {
+      "frame": 208,
+      "timestamp": 8.32,
+      "chunk_index": 207
+    },
+    {
+      "frame": 209,
+      "timestamp": 8.36,
+      "chunk_index": 208
+    },
+    {
+      "frame": 210,
+      "timestamp": 8.4,
+      "chunk_index": 209
+    },
+    {
+      "frame": 211,
+      "timestamp": 8.44,
+      "chunk_index": 210
+    },
+    {
+      "frame": 212,
+      "timestamp": 8.48,
+      "chunk_index": 211
+    },
+    {
+      "frame": 213,
+      "timestamp": 8.52,
+      "chunk_index": 212
+    },
+    {
+      "frame": 214,
+      "timestamp": 8.56,
+      "chunk_index": 213
+    },
+    {
+      "frame": 215,
+      "timestamp": 8.6,
+      "chunk_index": 214
+    },
+    {
+      "frame": 216,
+      "timestamp": 8.64,
+      "chunk_index": 215
+    },
+    {
+      "frame": 217,
+      "timestamp": 8.68,
+      "chunk_index": 216
+    },
+    {
+      "frame": 218,
+      "timestamp": 8.72,
+      "chunk_index": 217
+    },
+    {
+      "frame": 219,
+      "timestamp": 8.76,
+      "chunk_index": 218
+    },
+    {
+      "frame": 220,
+      "timestamp": 8.8,
+      "chunk_index": 219
+    },
+    {
+      "frame": 221,
+      "timestamp": 8.84,
+      "chunk_index": 220
+    },
+    {
+      "frame": 222,
+      "timestamp": 8.88,
+      "chunk_index": 221
+    },
+    {
+      "frame": 223,
+      "timestamp": 8.92,
+      "chunk_index": 222
+    },
+    {
+      "frame": 224,
+      "timestamp": 8.96,
+      "chunk_index": 223
+    },
+    {
+      "frame": 225,
+      "timestamp": 9.0,
+      "chunk_index": 224
+    },
+    {
+      "frame": 226,
+      "timestamp": 9.04,
+      "chunk_index": 225
+    },
+    {
+      "frame": 227,
+      "timestamp": 9.08,
+      "chunk_index": 226
+    },
+    {
+      "frame": 228,
+      "timestamp": 9.12,
+      "chunk_index": 227
+    },
+    {
+      "frame": 229,
+      "timestamp": 9.16,
+      "chunk_index": 228
+    },
+    {
+      "frame": 230,
+      "timestamp": 9.2,
+      "chunk_index": 229
+    },
+    {
+      "frame": 231,
+      "timestamp": 9.24,
+      "chunk_index": 230
+    },
+    {
+      "frame": 232,
+      "timestamp": 9.28,
+      "chunk_index": 231
+    },
+    {
+      "frame": 233,
+      "timestamp": 9.32,
+      "chunk_index": 232
+    },
+    {
+      "frame": 234,
+      "timestamp": 9.36,
+      "chunk_index": 233
+    },
+    {
+      "frame": 235,
+      "timestamp": 9.4,
+      "chunk_index": 234
+    },
+    {
+      "frame": 236,
+      "timestamp": 9.44,
+      "chunk_index": 235
+    },
+    {
+      "frame": 237,
+      "timestamp": 9.48,
+      "chunk_index": 236
+    },
+    {
+      "frame": 238,
+      "timestamp": 9.52,
+      "chunk_index": 237
+    },
+    {
+      "frame": 239,
+      "timestamp": 9.56,
+      "chunk_index": 238
+    },
+    {
+      "frame": 240,
+      "timestamp": 9.6,
+      "chunk_index": 239
+    },
+    {
+      "frame": 241,
+      "timestamp": 9.64,
+      "chunk_index": 240
+    },
+    {
+      "frame": 242,
+      "timestamp": 9.68,
+      "chunk_index": 241
+    },
+    {
+      "frame": 243,
+      "timestamp": 9.72,
+      "chunk_index": 242
+    },
+    {
+      "frame": 244,
+      "timestamp": 9.76,
+      "chunk_index": 243
+    },
+    {
+      "frame": 245,
+      "timestamp": 9.8,
+      "chunk_index": 244
+    },
+    {
+      "frame": 246,
+      "timestamp": 9.84,
+      "chunk_index": 245
+    },
+    {
+      "frame": 247,
+      "timestamp": 9.88,
+      "chunk_index": 246
+    },
+    {
+      "frame": 248,
+      "timestamp": 9.92,
+      "chunk_index": 247
+    },
+    {
+      "frame": 249,
+      "timestamp": 9.96,
+      "chunk_index": 248
+    },
+    {
+      "frame": 250,
+      "timestamp": 10.0,
+      "chunk_index": 249
+    },
+    {
+      "frame": 251,
+      "timestamp": 10.04,
+      "chunk_index": 250
+    },
+    {
+      "frame": 252,
+      "timestamp": 10.08,
+      "chunk_index": 251
+    },
+    {
+      "frame": 253,
+      "timestamp": 10.12,
+      "chunk_index": 252
+    },
+    {
+      "frame": 254,
+      "timestamp": 10.16,
+      "chunk_index": 253
+    },
+    {
+      "frame": 255,
+      "timestamp": 10.2,
+      "chunk_index": 254
+    }
+  ]
+}

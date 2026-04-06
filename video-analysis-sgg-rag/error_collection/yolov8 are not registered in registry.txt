@@ -1,0 +1,13 @@
+Check avaiable backbone types in:
+sgg_benchmark\modeling\backbone\backbone.py
+
+# Change yolov8 to yolo in config.yaml
+
+MODEL:
+  ATTRIBUTE_ON: false
+  BACKBONE:
+    EXTRA_CONFIG: ""
+    FREEZE: true
+    FREEZE_CONV_BODY_AT: 2
+    NMS_THRESH: 0.001
+    TYPE: yolo

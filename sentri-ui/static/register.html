@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - Sentri</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="auth-container">
+      <div class="auth-card">
+        <div class="auth-header">
+          <h1>🛡️ Sentri</h1>
+          <p>Personal Camera Monitoring System</p>
+        </div>
+
+        <form id="registerForm" class="auth-form">
+          <h2>Create Account</h2>
+
+          <div class="form-group">
+            <label for="username">Username *</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              required
+              placeholder="Enter username"
+              autocomplete="username"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email (optional)</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter email"
+              autocomplete="email"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password *</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              placeholder="Enter password"
+              autocomplete="new-password"
+              minlength="6"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="confirmPassword">Confirm Password *</label>
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              required
+              placeholder="Confirm password"
+              autocomplete="new-password"
+              minlength="6"
+            />
+          </div>
+
+          <div
+            id="error-message"
+            class="error-message"
+            style="display: none"
+          ></div>
+
+          <button type="submit" class="btn btn-primary">Register</button>
+
+          <div class="auth-footer">
+            Already have an account? <a href="/static/login.html">Login here</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      const registerForm = document.getElementById("registerForm");
+      const errorMessage = document.getElementById("error-message");
+
+      registerForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const username = document.getElementById("username").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const confirmPassword =
+          document.getElementById("confirmPassword").value;
+
+        // Validate
+        if (password !== confirmPassword) {
+          showError("Passwords do not match");
+          return;
+        }
+
+        if (password.length < 6) {
+          showError("Password must be at least 6 characters");
+          return;
+        }
+
+        try {
+          const response = await fetch("/auth/register", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              username,
+              password,
+              email: email || null,
+            }),
+          });
+
+          const data = await response.json();
+
+          if (response.ok) {
+            alert("Registration successful! Please login.");
+            window.location.href = "/static/login.html";
+          } else {
+            showError(data.detail || "Registration failed");
+          }
+        } catch (error) {
+          showError("Network error. Please try again.");
+          console.error("Registration error:", error);
+        }
+      });
+
+      function showError(message) {
+        errorMessage.textContent = message;
+        errorMessage.style.display = "block";
+        setTimeout(() => {
+          errorMessage.style.display = "none";
+        }, 5000);
+      }
+    </script>
+  </body>
+</html>

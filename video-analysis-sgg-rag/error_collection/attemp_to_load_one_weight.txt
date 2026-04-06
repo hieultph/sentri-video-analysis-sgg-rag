@@ -1,0 +1,2 @@
+# Change attempt_to_load_one_weight to torch_safe_load
+from ultralytics.nn.tasks import torch_safe_load
